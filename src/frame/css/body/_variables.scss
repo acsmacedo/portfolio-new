@@ -1,0 +1,20 @@
+// ********************************************* BREAKPOINTS
+$breakpoints: (
+  (
+    "name": sm, "container-width": 576px, "content-width": 540px,
+    "columns": 12, "gutters": 1rem, "padding": null
+  ), (
+    "name": md, "container-width": 768px, "content-width": 720px,
+    "columns": 12, "gutters": 1rem, "padding": null
+  ), (
+    "name": lg, "container-width": 960px, "content-width": 920px,
+    "columns": 12, "gutters": 1rem, "padding": null
+  ), (
+    "name": xl, "container-width": 1200px, "content-width": 1140px,
+    "columns": 12, "gutters": 1rem, "padding": null
+  )
+);
+
+
+// ********************************************* PADDING DEFAULT
+$padding-default: 2rem;

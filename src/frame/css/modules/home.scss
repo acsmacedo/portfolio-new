@@ -1,0 +1,93 @@
+@use '../body' as *;
+
+/* *********************************************************** HOME */
+.home__header {
+  &__container {
+    @include func-row(g-xl);
+    min-height: calc(100vh - 3rem);
+    padding: 2rem;
+    margin-top: 3rem;
+    background-color: var(--branco);
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    @media (min-width: func-container(lg)) {
+      text-align: left;
+      justify-content: flex-end;
+      align-items: flex-start;
+      padding-bottom: 3rem;
+      background-image: url("../../assets/illustrations/home-header.svg");
+      background-repeat: no-repeat;
+      background-position: 95% 75%;
+      background-size: 50%;
+    }
+    h1 {
+      @extend %titulo;
+      @media (min-width: func-container(sm)) {
+        font-size: 2.5em;
+      }
+      @media (min-width: func-container(lg)) {
+        max-width: 40%;
+        justify-content: flex-start;
+      }
+    }
+    p {
+      margin: 1rem 0;
+      @media (min-width: func-container(sm)) {
+        font-size: 1.2em;
+      }
+      @media (min-width: func-container(lg)) {
+        max-width: 40%;
+        margin-left: 1rem;
+      }
+    }
+    a {
+      @extend %btn;
+      margin-left: 1rem;
+    }
+    img {
+      max-width: 80%;
+      margin-bottom: 2rem;
+      margin-top: 1rem;
+      @media (min-width: func-container(md)) {
+        max-width: 400px;
+      }
+      @media (min-width: func-container(lg)) {
+        display: none;
+      }
+    }
+  } 
+}
+
+
+.home__about {
+  &__container {
+    @include func-row(g-xl);
+    padding: 2rem;
+    background-color: var(--verde-claro);
+    text-align: center;
+    @media (min-width: func-container(md)) {
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-between;
+      text-align: left;
+    }
+    div {
+      @include func-col(md-6);
+    }
+    img{
+      @include func-col(md-6);
+    }
+    h1 {
+      @extend %titulo;
+      margin-bottom: 1rem;
+      @media (min-width: func-container(md)) {
+      justify-content: flex-start;
+      }
+    }
+    p {
+      margin: 0.5rem 0;
+      
+    }
+  }
+}

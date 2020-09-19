@@ -1,0 +1,25 @@
+@use 'body' as *;
+
+// *********************************************************** MODULES
+@use './modules/home';
+
+// *********************************************************** FONTS
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Work+Sans:wght@300;600&display=swap');
+
+* {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+  color: var(--azul);
+  line-height: 1.3em;
+}
+
+html {
+  --azul: rgb(60, 80, 255);
+  --azul-claro: rgba(196, 202, 255);
+  --rosa: rgb(255, 185, 200);
+  --rosa-claro: rgb(255, 220, 227);
+  --verde: rgb(135, 235, 200);
+  --verde-claro: rgb(195, 245, 227);
+  --branco: rgb(245, 245, 245);
+  --branco-claro: rgb(255, 255, 255);
+}
