@@ -7,9 +7,8 @@
           <span>bem-vindo!</span>
         </h1>
         <p>Detalhita, ágil e focado. O que mais um desenvolvedor front-end precisa ser?</p>
-        <a href="#">saiba mais</a>
       </div>
-      <img src="../../assets/illustrations/home-header-2.svg" alt="">
+      <img src="../../assets/illustrations/home-header.svg" alt="">
     </div>
   </header>
 </template>

@@ -56,24 +56,7 @@ button, select, input, textarea {
 }
 
 /* *********************************************************** ELEMENTS */
-.home__header__container a {
-  --shadow: var(--verde-claro);
-  font-family: "Courier Prime", monospace;
-  font-size: 0.8em;
-  font-weight: 700;
-  text-transform: lowercase;
-  color: var(--preto);
-  background-color: var(--branco-claro);
-  border: 0.125rem solid var(--preto);
-  border-radius: 0.3rem;
-  box-shadow: var(--shadow) 0 -0.25rem 0px 0px inset;
-  padding: 0.5rem 1.25rem;
-  outline: none;
-}
-
 .home__header__container h1, .home__about__container h1 {
-  --shadow: var(--rosa);
-  line-height: 0.85em;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -83,10 +66,10 @@ button, select, input, textarea {
   font-size: 1em;
   line-height: 0.45em;
   font-weight: 700;
-  color: var(--azul);
-  box-shadow: var(--shadow) 0 -0.2em 0 0 inset;
-  padding: 0 0.25em;
-  margin: 0.5em 0.2em 0 0.2em;
+  color: var(--preto);
+  box-shadow: var(--verde) 0 -0.2em 0 0 inset;
+  padding: 0 0.15em;
+  margin: 0.7em 0.15em 0 0.15em;
 }
 
 /* **************************************************************** CONTAINER */
@@ -198,19 +181,12 @@ button, select, input, textarea {
     justify-content: flex-start;
   }
 }
+.home__header__container p {
+  margin-bottom: 2rem;
+}
 @media (min-width: 768px) {
   .home__header__container p {
-    margin-left: 1.25rem;
-  }
-}
-.home__header__container a {
-  margin: 1rem 0 2rem 0;
-  align-self: center;
-}
-@media (min-width: 768px) {
-  .home__header__container a {
-    align-self: flex-start;
-    margin-left: 1.25rem;
+    margin-left: 0.9rem;
   }
 }
 
@@ -264,7 +240,7 @@ button, select, input, textarea {
 }
 @media (min-width: 768px) {
   .home__about__container p {
-    margin: 0 0 1rem 1.25rem;
+    margin: 0 0 1rem 0.9rem;
     padding-right: 3rem;
   }
 }
@@ -281,18 +257,14 @@ button, select, input, textarea {
 
 html {
   --preto: rgb(39, 48, 63);
-  --azul: rgb(35, 35, 35);
-  --azul-claro: rgba(196, 202, 255);
-  --rosa: rgb(255, 185, 200);
-  --rosa-claro: rgb(255, 220, 227);
   --verde: rgb(135, 235, 200);
-  --verde-claro: rgb(195, 245, 227);
-  --branco: rgb(247, 244, 237);
+  --verde-claro: rgb(207, 247, 233);
+  --branco: rgb(251, 249, 246);
   --branco-claro: rgb(255, 255, 255);
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 2.2em;
 }
 @media (min-width: 576px) {
   h1 {

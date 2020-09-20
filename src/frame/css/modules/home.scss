@@ -7,7 +7,6 @@
     padding: 2.5rem 1.5rem;
     background-color: var(--branco);
     text-align: center;
-
     @media (min-width: func-container(sm)) {
       padding: 3rem 2.5rem;
     }
@@ -40,17 +39,9 @@
       }
     }
     p {
+      margin-bottom: 2rem;
       @media (min-width: func-container(md)) {
-        margin-left: 1.25rem;
-      }
-    }
-    a {
-      @extend %btn;
-      margin: 1rem 0 2rem 0;
-      align-self: center;
-      @media (min-width: func-container(md)) {
-        align-self: flex-start;
-        margin-left: 1.25rem;
+        margin-left: 0.9rem;
       }
     }
   } 
@@ -99,7 +90,7 @@
     p {
       margin-bottom: 1rem; 
       @media (min-width: func-container(md)) {
-        margin: 0 0 1rem 1.25rem; 
+        margin: 0 0 1rem 0.9rem; 
         padding-right: 3rem;
       }
     }
