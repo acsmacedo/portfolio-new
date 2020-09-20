@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Work+Sans:wght@300;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Work+Sans:wght@400;600&display=swap");
 /* ********************************************* RESET */
 * {
   box-sizing: border-box;
@@ -57,21 +57,22 @@ button, select, input, textarea {
 
 /* *********************************************************** ELEMENTS */
 .home__header__container a {
+  --shadow: var(--verde-claro);
   font-family: "Courier Prime", monospace;
   font-size: 0.8em;
   font-weight: 700;
   text-transform: lowercase;
-  color: var(--azul);
+  color: var(--preto);
   background-color: var(--branco-claro);
-  border: 0.125rem solid var(--azul);
+  border: 0.125rem solid var(--preto);
   border-radius: 0.3rem;
-  box-shadow: var(--azul-claro) 0 -0.25rem 0px 0px inset;
+  box-shadow: var(--shadow) 0 -0.25rem 0px 0px inset;
   padding: 0.5rem 1.25rem;
   outline: none;
 }
 
 .home__header__container h1, .home__about__container h1 {
-  font-size: 2em;
+  --shadow: var(--rosa);
   line-height: 0.85em;
   display: flex;
   flex-wrap: wrap;
@@ -83,7 +84,7 @@ button, select, input, textarea {
   line-height: 0.45em;
   font-weight: 700;
   color: var(--azul);
-  box-shadow: var(--rosa) 0 -0.2em 0 0 inset;
+  box-shadow: var(--shadow) 0 -0.2em 0 0 inset;
   padding: 0 0.25em;
   margin: 0.5em 0.2em 0 0.2em;
 }
@@ -133,91 +134,125 @@ button, select, input, textarea {
 }
 /* **************************************************************** GRID */
 @media (min-width: 768px) {
-  .home__about__container div, .home__about__container img {
+  .home__header__container div, .home__header__container img, .home__about__container div, .home__about__container img {
     width: calc(100% / 12 * 6);
+  }
+}
+@media (min-width: 960px) {
+  .home__header__container div {
+    width: calc(100% / 12 * 5);
+  }
+
+  .home__header__container img {
+    width: calc(100% / 12 * 7);
+  }
+}
+@media (min-width: 1200px) {
+  .home__header__container div {
+    width: calc(100% / 12 * 4);
+  }
+
+  .home__header__container img {
+    width: calc(100% / 12 * 8);
   }
 }
 /* *********************************************************** HOME */
 .home__header__container {
-  min-height: calc(100vh - 3rem);
-  padding: 2rem;
-  margin-top: 3rem;
+  padding: 2.5rem 1.5rem;
   background-color: var(--branco);
-  justify-content: center;
   text-align: center;
-  align-items: center;
+}
+@media (min-width: 576px) {
+  .home__header__container {
+    padding: 3rem 2.5rem;
+  }
+}
+@media (min-width: 768px) {
+  .home__header__container {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+  }
 }
 @media (min-width: 960px) {
   .home__header__container {
-    text-align: left;
-    justify-content: flex-end;
-    align-items: flex-start;
-    padding-bottom: 3rem;
-    background-image: url("../../assets/illustrations/home-header.svg");
-    background-repeat: no-repeat;
-    background-position: 95% 75%;
-    background-size: 50%;
+    padding: 4rem;
   }
 }
-@media (min-width: 576px) {
-  .home__header__container h1 {
-    font-size: 2.5em;
+@media (min-width: 768px) {
+  .home__header__container div {
+    padding-right: 2rem;
+    align-self: flex-end;
   }
 }
-@media (min-width: 960px) {
+.home__header__container img {
+  max-width: 90%;
+  margin: 0 auto;
+}
+.home__header__container h1 {
+  --shadow: var(--verde);
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 768px) {
   .home__header__container h1 {
-    max-width: 40%;
     justify-content: flex-start;
   }
 }
-.home__header__container p {
-  margin: 1rem 0;
-}
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   .home__header__container p {
-    font-size: 1.2em;
-  }
-}
-@media (min-width: 960px) {
-  .home__header__container p {
-    max-width: 40%;
-    margin-left: 1rem;
+    margin-left: 1.25rem;
   }
 }
 .home__header__container a {
-  margin-left: 1rem;
-}
-.home__header__container img {
-  max-width: 80%;
-  margin-bottom: 2rem;
-  margin-top: 1rem;
+  margin: 1rem 0 2rem 0;
+  align-self: center;
 }
 @media (min-width: 768px) {
-  .home__header__container img {
-    max-width: 400px;
-  }
-}
-@media (min-width: 960px) {
-  .home__header__container img {
-    display: none;
+  .home__header__container a {
+    align-self: flex-start;
+    margin-left: 1.25rem;
   }
 }
 
 .home__about__container {
-  padding: 2rem;
+  padding: 2.5rem 1.5rem;
   background-color: var(--verde-claro);
   text-align: center;
+}
+@media (min-width: 576px) {
+  .home__about__container {
+    padding: 3rem 2.5rem;
+  }
 }
 @media (min-width: 768px) {
   .home__about__container {
     flex-direction: row-reverse;
     align-items: center;
-    justify-content: space-between;
     text-align: left;
   }
 }
-.home__about__container h1 {
+@media (min-width: 960px) {
+  .home__about__container {
+    padding: 4rem;
+  }
+}
+.home__about__container div {
   margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .home__about__container div {
+    margin-bottom: 0;
+  }
+}
+.home__about__container img {
+  max-width: 80%;
+  max-height: 400px;
+  margin: 0 auto;
+  object-fit: contain;
+}
+.home__about__container h1 {
+  --shadow: var(--verde);
+  margin-bottom: 1.5rem;
 }
 @media (min-width: 768px) {
   .home__about__container h1 {
@@ -225,25 +260,55 @@ button, select, input, textarea {
   }
 }
 .home__about__container p {
-  margin: 0.5rem 0;
+  margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .home__about__container p {
+    margin: 0 0 1rem 1.25rem;
+    padding-right: 3rem;
+  }
+}
+.home__about__container a {
+  font-weight: 600;
+  border-bottom: 0.0625rem dotted var(--preto);
 }
 
 * {
   font-family: "Work Sans", sans-serif;
-  font-weight: 300;
-  color: var(--azul);
-  line-height: 1.3em;
+  font-weight: 400;
+  color: var(--preto);
 }
 
 html {
-  --azul: rgb(60, 80, 255);
+  --preto: rgb(39, 48, 63);
+  --azul: rgb(35, 35, 35);
   --azul-claro: rgba(196, 202, 255);
   --rosa: rgb(255, 185, 200);
   --rosa-claro: rgb(255, 220, 227);
   --verde: rgb(135, 235, 200);
   --verde-claro: rgb(195, 245, 227);
-  --branco: rgb(245, 245, 245);
+  --branco: rgb(247, 244, 237);
   --branco-claro: rgb(255, 255, 255);
+}
+
+h1 {
+  font-size: 2em;
+}
+@media (min-width: 576px) {
+  h1 {
+    font-size: 2.5em;
+  }
+}
+
+p {
+  font-size: 0.9em;
+  line-height: 1.5em;
+  letter-spacing: 0.02em;
+}
+@media (min-width: 576px) {
+  p {
+    font-size: 1em;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

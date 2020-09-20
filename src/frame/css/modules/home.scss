@@ -4,56 +4,53 @@
 .home__header {
   &__container {
     @include func-row(g-xl);
-    min-height: calc(100vh - 3rem);
-    padding: 2rem;
-    margin-top: 3rem;
+    padding: 2.5rem 1.5rem;
     background-color: var(--branco);
-    justify-content: center;
     text-align: center;
-    align-items: center;
-    @media (min-width: func-container(lg)) {
+
+    @media (min-width: func-container(sm)) {
+      padding: 3rem 2.5rem;
+    }
+    @media (min-width: func-container(md)) {
+      flex-direction: row;
+      align-items: center;
       text-align: left;
-      justify-content: flex-end;
-      align-items: flex-start;
-      padding-bottom: 3rem;
-      background-image: url("../../assets/illustrations/home-header.svg");
-      background-repeat: no-repeat;
-      background-position: 95% 75%;
-      background-size: 50%;
+    }
+    @media (min-width: func-container(lg)) {
+      padding: 4rem;
+    }
+    div {
+      @include func-col(md-6, lg-5, xl-4);
+      @media (min-width: func-container(md)) {
+        padding-right: 2rem;
+        align-self: flex-end;
+      }
+    }
+    img {
+      @include func-col(md-6, lg-7, xl-8);
+      max-width: 90%;
+      margin: 0 auto;
     }
     h1 {
+      --shadow: var(--verde);
       @extend %titulo;
-      @media (min-width: func-container(sm)) {
-        font-size: 2.5em;
-      }
-      @media (min-width: func-container(lg)) {
-        max-width: 40%;
+      margin-bottom: 1.5rem;
+      @media (min-width: func-container(md)) {
         justify-content: flex-start;
       }
     }
     p {
-      margin: 1rem 0;
-      @media (min-width: func-container(sm)) {
-        font-size: 1.2em;
-      }
-      @media (min-width: func-container(lg)) {
-        max-width: 40%;
-        margin-left: 1rem;
+      @media (min-width: func-container(md)) {
+        margin-left: 1.25rem;
       }
     }
     a {
       @extend %btn;
-      margin-left: 1rem;
-    }
-    img {
-      max-width: 80%;
-      margin-bottom: 2rem;
-      margin-top: 1rem;
+      margin: 1rem 0 2rem 0;
+      align-self: center;
       @media (min-width: func-container(md)) {
-        max-width: 400px;
-      }
-      @media (min-width: func-container(lg)) {
-        display: none;
+        align-self: flex-start;
+        margin-left: 1.25rem;
       }
     }
   } 
@@ -63,31 +60,52 @@
 .home__about {
   &__container {
     @include func-row(g-xl);
-    padding: 2rem;
+    padding: 2.5rem 1.5rem;
     background-color: var(--verde-claro);
     text-align: center;
+    @media (min-width: func-container(sm)) {
+      padding: 3rem 2.5rem;
+    }
     @media (min-width: func-container(md)) {
       flex-direction: row-reverse;
       align-items: center;
-      justify-content: space-between;
       text-align: left;
+    }
+    @media (min-width: func-container(lg)) {
+      padding: 4rem;
     }
     div {
       @include func-col(md-6);
+      margin-bottom: 1rem;
+      @media (min-width: func-container(md)) {
+        margin-bottom: 0;
+      }
     }
     img{
       @include func-col(md-6);
+      max-width: 80%;
+      max-height: 400px;
+      margin: 0 auto;
+      object-fit: contain;
     }
     h1 {
+      --shadow: var(--verde);
       @extend %titulo;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
       @media (min-width: func-container(md)) {
-      justify-content: flex-start;
+        justify-content: flex-start;
       }
     }
     p {
-      margin: 0.5rem 0;
-      
+      margin-bottom: 1rem; 
+      @media (min-width: func-container(md)) {
+        margin: 0 0 1rem 1.25rem; 
+        padding-right: 3rem;
+      }
+    }
+    a {
+      font-weight: 600;
+      border-bottom: 0.0625rem dotted var(--preto);
     }
   }
 }

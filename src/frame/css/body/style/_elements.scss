@@ -1,20 +1,21 @@
 /* *********************************************************** ELEMENTS */
 %btn {
+  --shadow: var(--verde-claro);
   font-family: 'Courier Prime', monospace;
   font-size: 0.8em;
   font-weight: 700;
   text-transform: lowercase;
-  color: var(--azul);
+  color: var(--preto);
   background-color: var(--branco-claro);
-  border: 0.125rem solid var(--azul);
+  border: 0.125rem solid var(--preto);
   border-radius: 0.3rem;
-  box-shadow: var(--azul-claro) 0 -0.25rem 0px 0px inset;
+  box-shadow: var(--shadow) 0 -0.25rem 0px 0px inset;
   padding: 0.5rem 1.25rem;
   outline: none;
 }
 
 %titulo {
-  font-size: 2em;
+  --shadow: var(--rosa);
   line-height: 0.85em;
   display: flex;
   flex-wrap: wrap;
@@ -25,7 +26,7 @@
     line-height: 0.45em;
     font-weight: 700;
     color: var(--azul);
-    box-shadow: var(--rosa) 0 -0.2em 0 0 inset;
+    box-shadow: var(--shadow) 0 -0.2em 0 0 inset;
     padding: 0 0.25em;
     margin: 0.5em 0.2em 0 0.2em;
   }

@@ -1,13 +1,15 @@
 <template>
   <header class="home__header">
     <div class=home__header__container>
-      <h1>
-        <span>Desenvolvedor</span>
-        <span>Front-end</span>
-      </h1>
-      <p>Minimalista, funcional e esteticamente agradável. O que mais um site ou aplicação web precisa ser?</p>
+      <div>
+        <h1>
+          <span>Seja</span>
+          <span>bem-vindo!</span>
+        </h1>
+        <p>Detalhita, ágil e focado. O que mais um desenvolvedor front-end precisa ser?</p>
+        <a href="#">saiba mais</a>
+      </div>
       <img src="../../assets/illustrations/home-header-2.svg" alt="">
-      <a href="#">saiba mais</a>
     </div>
   </header>
 </template>
