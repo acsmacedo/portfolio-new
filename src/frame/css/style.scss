@@ -14,16 +14,30 @@
 
 html {
   --preto: rgb(39, 48, 63);
+  --verde-escuro: rgb(50, 215, 180);
   --verde: rgb(135, 235, 200);
   --verde-claro: rgb(207, 247, 233);
+  --azul-claro: rgb(177, 185, 255);
+  --rosa-claro: rgb(255, 227, 233);
   --branco: rgb(251, 249, 246);
   --branco-claro: rgb(255, 255, 255);
 }
 
-h1 {
+body {
+  background-color: var(--branco);
+}
+
+h2 {
   font-size: 2.2em;
   @media (min-width: func-container(sm)) {
     font-size: 2.5em;
+  }
+}
+
+h3 {
+  font-size: 1.3em;
+  @media (min-width: func-container(sm)) {
+    font-size: 1.5em;
   }
 }
 

@@ -30,7 +30,7 @@
       max-width: 90%;
       margin: 0 auto;
     }
-    h1 {
+    h2 {
       --shadow: var(--verde);
       @extend %titulo;
       margin-bottom: 1.5rem;
@@ -49,10 +49,11 @@
 
 
 .home__about {
+  background-color: var(--verde-claro);
   &__container {
     @include func-row(g-xl);
     padding: 2.5rem 1.5rem;
-    background-color: var(--verde-claro);
+    
     text-align: center;
     @media (min-width: func-container(sm)) {
       padding: 3rem 2.5rem;
@@ -79,7 +80,7 @@
       margin: 0 auto;
       object-fit: contain;
     }
-    h1 {
+    h2 {
       --shadow: var(--verde);
       @extend %titulo;
       margin-bottom: 1.5rem;
@@ -97,6 +98,105 @@
     a {
       font-weight: 600;
       border-bottom: 0.0625rem dotted var(--preto);
+    }
+  }
+}
+
+.home__projects {
+  padding: 2rem 0;
+  &__title {
+    @include func-row(g-md);
+    text-align: center;
+    margin-bottom: 2rem;
+    h2 {
+      @extend %titulo;
+      margin-bottom: 1.5rem;
+    }
+  }
+  &__body {
+    @include func-row(g-xl);
+    flex-direction: row;
+    div:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+  &__large {
+    @include func-col(md-12);
+    > p {
+      max-width: 600px;
+      align-self: center;
+    }
+  }
+  &__medium {
+    @include func-col(md-gutters-6);
+  }
+  &__medium, &__large {
+    padding: 3rem 1rem;
+    text-align: center;
+    border: 0.0625rem solid var(--preto);
+    margin-top: 1rem;
+    justify-content: center;
+    background-color: var(--branco-claro);
+    @media (min-width: func-container(lg)) {
+      padding: 4rem;
+    }
+    &:hover {
+      border-color: var(--verde-escuro);
+      background-color: var(--verde-claro);
+    }
+    > h3 {
+      font-family: 'Courier Prime', monospace;
+      font-weight: 600;
+      font-size: 1.4em;
+    }
+    > p {
+      margin: 1rem 0;
+    }
+    > span {
+      color: var(--verde-escuro);
+      font-weight: 600;
+      font-size: 0.75em;
+      letter-spacing: 0.05em;
+    }
+    > img {
+      max-width: 4rem;
+      margin: 0 auto;
+    }
+  }
+  &__links {
+    align-items: center;
+    margin-top: 2rem;
+    @media (min-width: func-container(sm)) {
+      flex-direction: row;
+      justify-content: center;
+    }
+    > a {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      &:hover {
+        > span {
+          border-color: var(--verde-escuro);
+        }
+      }
+      &:first-child {
+        margin-bottom: 0.5rem;
+        @media (min-width: func-container(sm)) {
+        margin-right: 1.5rem;
+        margin-bottom: 0;
+        }
+      }
+      > img {
+        height: 1.5rem;
+        width: 1.5rem;
+        margin-right: 0.5rem;
+      }
+      > span {
+        font-family: 'Courier Prime', monospace;
+        font-size: 0.8em;
+        font-weight: 700;
+        border-bottom: 0.0625rem solid transparent;
+      }
     }
   }
 }

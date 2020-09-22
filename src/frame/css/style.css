@@ -56,12 +56,12 @@ button, select, input, textarea {
 }
 
 /* *********************************************************** ELEMENTS */
-.home__header__container h1, .home__about__container h1 {
+.home__header__container h2, .home__about__container h2, .home__projects__title h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-.home__header__container h1 span, .home__about__container h1 span {
+.home__header__container h2 span, .home__about__container h2 span, .home__projects__title h2 span {
   font-family: "Courier Prime", monospace;
   font-size: 1em;
   line-height: 0.45em;
@@ -73,14 +73,14 @@ button, select, input, textarea {
 }
 
 /* **************************************************************** CONTAINER */
-.home__header__container, .home__about__container {
+.home__projects__title, .home__header__container, .home__about__container, .home__projects__body {
   width: 100%;
   padding-right: 2rem;
   padding-left: 2rem;
 }
 
 @media (min-width: 576px) {
-  .home__header__container, .home__about__container {
+  .home__projects__title, .home__header__container, .home__about__container, .home__projects__body {
     width: 540px;
     margin-right: auto;
     margin-left: auto;
@@ -89,7 +89,7 @@ button, select, input, textarea {
   }
 }
 @media (min-width: 768px) {
-  .home__header__container, .home__about__container {
+  .home__projects__title, .home__header__container, .home__about__container, .home__projects__body {
     width: 720px;
     margin-right: auto;
     margin-left: auto;
@@ -98,7 +98,7 @@ button, select, input, textarea {
   }
 }
 @media (min-width: 960px) {
-  .home__header__container, .home__about__container {
+  .home__header__container, .home__about__container, .home__projects__body {
     width: 920px;
     margin-right: auto;
     margin-left: auto;
@@ -107,7 +107,7 @@ button, select, input, textarea {
   }
 }
 @media (min-width: 1200px) {
-  .home__header__container, .home__about__container {
+  .home__header__container, .home__about__container, .home__projects__body {
     width: 1140px;
     margin-right: auto;
     margin-left: auto;
@@ -119,6 +119,15 @@ button, select, input, textarea {
 @media (min-width: 768px) {
   .home__header__container div, .home__header__container img, .home__about__container div, .home__about__container img {
     width: calc(100% / 12 * 6);
+  }
+
+  .home__projects__medium {
+    width: calc(100% / 12 * 6 - 1rem * 6 / 12);
+    margin-right: calc(1rem);
+  }
+
+  .home__projects__large {
+    width: calc(100% / 12 * 12);
   }
 }
 @media (min-width: 960px) {
@@ -172,12 +181,12 @@ button, select, input, textarea {
   max-width: 90%;
   margin: 0 auto;
 }
-.home__header__container h1 {
+.home__header__container h2 {
   --shadow: var(--verde);
   margin-bottom: 1.5rem;
 }
 @media (min-width: 768px) {
-  .home__header__container h1 {
+  .home__header__container h2 {
     justify-content: flex-start;
   }
 }
@@ -190,9 +199,11 @@ button, select, input, textarea {
   }
 }
 
+.home__about {
+  background-color: var(--verde-claro);
+}
 .home__about__container {
   padding: 2.5rem 1.5rem;
-  background-color: var(--verde-claro);
   text-align: center;
 }
 @media (min-width: 576px) {
@@ -226,12 +237,12 @@ button, select, input, textarea {
   margin: 0 auto;
   object-fit: contain;
 }
-.home__about__container h1 {
+.home__about__container h2 {
   --shadow: var(--verde);
   margin-bottom: 1.5rem;
 }
 @media (min-width: 768px) {
-  .home__about__container h1 {
+  .home__about__container h2 {
     justify-content: flex-start;
   }
 }
@@ -249,6 +260,100 @@ button, select, input, textarea {
   border-bottom: 0.0625rem dotted var(--preto);
 }
 
+.home__projects {
+  padding: 2rem 0;
+}
+.home__projects__title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.home__projects__title h2 {
+  margin-bottom: 1.5rem;
+}
+.home__projects__body {
+  flex-direction: row;
+}
+.home__projects__body div:nth-child(3n) {
+  margin-right: 0;
+}
+.home__projects__large > p {
+  max-width: 600px;
+  align-self: center;
+}
+.home__projects__medium, .home__projects__large {
+  padding: 3rem 1rem;
+  text-align: center;
+  border: 0.0625rem solid var(--preto);
+  margin-top: 1rem;
+  justify-content: center;
+  background-color: var(--branco-claro);
+}
+@media (min-width: 960px) {
+  .home__projects__medium, .home__projects__large {
+    padding: 4rem;
+  }
+}
+.home__projects__medium:hover, .home__projects__large:hover {
+  border-color: var(--verde-escuro);
+  background-color: var(--verde-claro);
+}
+.home__projects__medium > h3, .home__projects__large > h3 {
+  font-family: "Courier Prime", monospace;
+  font-weight: 600;
+  font-size: 1.4em;
+}
+.home__projects__medium > p, .home__projects__large > p {
+  margin: 1rem 0;
+}
+.home__projects__medium > span, .home__projects__large > span {
+  color: var(--verde-escuro);
+  font-weight: 600;
+  font-size: 0.75em;
+  letter-spacing: 0.05em;
+}
+.home__projects__medium > img, .home__projects__large > img {
+  max-width: 4rem;
+  margin: 0 auto;
+}
+.home__projects__links {
+  align-items: center;
+  margin-top: 2rem;
+}
+@media (min-width: 576px) {
+  .home__projects__links {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+.home__projects__links > a {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.home__projects__links > a:hover > span {
+  border-color: var(--verde-escuro);
+}
+.home__projects__links > a:first-child {
+  margin-bottom: 0.5rem;
+}
+@media (min-width: 576px) {
+  .home__projects__links > a:first-child {
+    margin-right: 1.5rem;
+    margin-bottom: 0;
+  }
+}
+.home__projects__links > a > img {
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-right: 0.5rem;
+}
+.home__projects__links > a > span {
+  font-family: "Courier Prime", monospace;
+  font-size: 0.8em;
+  font-weight: 700;
+  border-bottom: 0.0625rem solid transparent;
+}
+
 * {
   font-family: "Work Sans", sans-serif;
   font-weight: 400;
@@ -257,18 +362,34 @@ button, select, input, textarea {
 
 html {
   --preto: rgb(39, 48, 63);
+  --verde-escuro: rgb(50, 215, 180);
   --verde: rgb(135, 235, 200);
   --verde-claro: rgb(207, 247, 233);
+  --azul-claro: rgb(177, 185, 255);
+  --rosa-claro: rgb(255, 227, 233);
   --branco: rgb(251, 249, 246);
   --branco-claro: rgb(255, 255, 255);
 }
 
-h1 {
+body {
+  background-color: var(--branco);
+}
+
+h2 {
   font-size: 2.2em;
 }
 @media (min-width: 576px) {
-  h1 {
+  h2 {
     font-size: 2.5em;
+  }
+}
+
+h3 {
+  font-size: 1.3em;
+}
+@media (min-width: 576px) {
+  h3 {
+    font-size: 1.5em;
   }
 }
 

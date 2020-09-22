@@ -2,10 +2,10 @@
   <header class="home__header">
     <div class=home__header__container>
       <div>
-        <h1>
+        <h2>
           <span>Seja</span>
           <span>bem-vindo!</span>
-        </h1>
+        </h2>
         <p>Detalhita, ágil e focado. O que mais um desenvolvedor front-end precisa ser?</p>
       </div>
       <img src="../../assets/illustrations/home-header.svg" alt="">
