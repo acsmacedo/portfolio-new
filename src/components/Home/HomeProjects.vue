@@ -9,7 +9,7 @@
       <div class="home__projects__large">
         <img src="../../assets/icons/clipboard-list-solid.svg" alt="">
         <h3>To do list</h3>
-        <p>Aplicação que registra tarefas à fazer. Possui ferramentas de filtro e ordenação, salva as tarefas no navegador (Storage API) e possui botão para alternar paleta de cor (claro / escuro).</p>
+        <p>Aplicação que registra tarefas à fazer. Possui ferramentas de filtro e ordenação, salva as tarefas no navegador (Storage API) e possui botão para alternar paleta de cor (dark / light).</p>
         <span>HTML, CSS, Sass, Javascript, Vue, Storage API.</span>
         <HomeProjectsLinks 
           online="https://acsmacedo-todolist.netlify.app/"
@@ -31,7 +31,7 @@
       <div class="home__projects__medium">
         <img src="../../assets/icons/briefcase-solid.svg" alt="">
         <h3>Clone Corporate</h3>
-        <p>Codificação de um modelo de site comercial com o tema "Corporate". Site responsivo. Desenvolvido sem frameworks.</p>
+        <p>Codificação de um modelo de site comercial com o tema "Negócios". Site responsivo. Desenvolvido sem frameworks.</p>
         <span>HTML, CSS, Sass, Javascript.</span>
         <HomeProjectsLinks 
           online="https://acsmacedo-clone-corporate.netlify.app/"
@@ -42,7 +42,7 @@
       <div class="home__projects__large">
         <img src="../../assets/icons/clock-solid.svg" alt="">
         <h3>Toolbox</h3>
-        <p>Aplicação com algumas ferramentas úteis (relógio, timer e cronômetro). Possui botão para alternar paleta de cor (claro / escuro).</p>
+        <p>Aplicação com algumas ferramentas úteis (relógio, timer e cronômetro). Possui botão para alternar paleta de cor (dark / light).</p>
         <span>HTML, CSS, Sass, Javascript, Vue.</span>
         <HomeProjectsLinks 
           online="https://acsmacedo-toolbox.netlify.app/"

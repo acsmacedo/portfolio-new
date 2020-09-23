@@ -73,14 +73,14 @@ button, select, input, textarea {
 }
 
 /* **************************************************************** CONTAINER */
-.home__projects__title, .home__header__container, .home__about__container, .home__projects__body, .footer__contact, .footer__copy {
+.home__projects__title, .home__header__container, .home__about__container, .home__projects__body, .home__contact__container, .footer__contact, .footer__copy {
   width: 100%;
   padding-right: 2rem;
   padding-left: 2rem;
 }
 
 @media (min-width: 576px) {
-  .home__projects__title, .home__header__container, .home__about__container, .home__projects__body, .footer__contact, .footer__copy {
+  .home__projects__title, .home__header__container, .home__about__container, .home__projects__body, .home__contact__container, .footer__contact, .footer__copy {
     width: 540px;
     margin-right: auto;
     margin-left: auto;
@@ -89,7 +89,7 @@ button, select, input, textarea {
   }
 }
 @media (min-width: 768px) {
-  .home__header__container, .home__about__container, .home__projects__body, .footer__contact, .footer__copy {
+  .home__header__container, .home__about__container, .home__projects__body, .home__contact__container, .footer__contact, .footer__copy {
     width: 720px;
     margin-right: auto;
     margin-left: auto;
@@ -98,7 +98,7 @@ button, select, input, textarea {
   }
 }
 @media (min-width: 960px) {
-  .home__header__container, .home__about__container, .home__projects__body, .footer__contact, .footer__copy {
+  .home__header__container, .home__about__container, .home__projects__body, .home__contact__container, .footer__contact, .footer__copy {
     width: 920px;
     margin-right: auto;
     margin-left: auto;
@@ -107,7 +107,7 @@ button, select, input, textarea {
   }
 }
 @media (min-width: 1200px) {
-  .home__header__container, .home__about__container, .home__projects__body, .footer__contact, .footer__copy {
+  .home__header__container, .home__about__container, .home__projects__body, .home__contact__container, .footer__contact, .footer__copy {
     width: 1140px;
     margin-right: auto;
     margin-left: auto;
@@ -117,7 +117,7 @@ button, select, input, textarea {
 }
 /* **************************************************************** GRID */
 @media (min-width: 768px) {
-  .home__header__container div, .home__header__container img, .home__about__container div, .home__about__container img {
+  .home__header__container div, .home__header__container img, .home__about__container > div, .home__about__container > img, .home__contact__text, .home__contact img {
     width: calc(100% / 12 * 6);
   }
 
@@ -149,11 +149,6 @@ button, select, input, textarea {
   }
 }
 /* *********************************************************** ALL */
-.contact {
-  background-color: var(--verde-claro);
-  padding: 10rem;
-}
-
 .footer {
   color: var(--branco);
   background-color: var(--preto);
@@ -166,15 +161,15 @@ button, select, input, textarea {
   }
 }
 .footer__contact {
+  font-size: 0.8em;
   align-items: center;
   padding: 0 0 1rem 0;
-  font-size: 0.8em;
 }
-@media (min-width: 768px) {
+@media (min-width: 576px) {
   .footer__contact {
+    font-size: 1em;
     flex-direction: row;
     justify-content: center;
-    font-size: 1em;
   }
 }
 .footer__contact > a {
@@ -185,7 +180,7 @@ button, select, input, textarea {
 .footer__contact > a:hover span {
   border-color: var(--verde-escuro);
 }
-@media (min-width: 768px) {
+@media (min-width: 576px) {
   .footer__contact > a:first-child {
     margin-right: 1.5rem;
   }
@@ -195,7 +190,7 @@ button, select, input, textarea {
   height: 20px;
   margin-right: 0.5rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 576px) {
   .footer__contact > a > img {
     width: 25px;
     height: 25px;
@@ -205,9 +200,9 @@ button, select, input, textarea {
   border-bottom: 0.0625rem dotted transparent;
 }
 .footer__copy {
+  font-size: 0.8em;
   padding: 1rem 0 0 0;
   border-top: 0.0625rem solid var(--verde-escuro);
-  font-size: 0.8em;
 }
 .footer__copy > div {
   flex-direction: row;
@@ -305,17 +300,47 @@ button, select, input, textarea {
     padding: 4rem;
   }
 }
-.home__about__container div {
+.home__about__container > div {
   margin-bottom: 1rem;
+  align-items: center;
 }
 @media (min-width: 768px) {
-  .home__about__container div {
+  .home__about__container > div {
     margin-bottom: 0;
+    padding-left: 2rem;
+    align-items: flex-start;
   }
 }
-.home__about__container img {
+.home__about__container > div > div {
+  flex-direction: row;
+  align-items: flex-start;
+}
+.home__about__container > div > div a {
+  width: 35px;
+  height: 35px;
+  border: 0.0625rem solid var(--verde-escuro);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home__about__container > div > div a:hover {
+  background-color: var(--branco);
+}
+.home__about__container > div > div a:first-child {
+  margin-right: 0.5rem;
+}
+@media (min-width: 768px) {
+  .home__about__container > div > div a:first-child {
+    margin-left: 0.9rem;
+  }
+}
+.home__about__container > div > div img {
+  width: 25px;
+  height: 25px;
+}
+.home__about__container > img {
   max-width: 80%;
-  max-height: 400px;
+  max-height: 600px;
   margin: 0 auto;
   object-fit: contain;
 }
@@ -337,9 +362,13 @@ button, select, input, textarea {
     padding-right: 3rem;
   }
 }
-.home__about__container a {
+.home__about__container p a {
   font-weight: 600;
   border-bottom: 0.0625rem dotted var(--preto);
+}
+.home__about__container p a:hover {
+  color: var(--verde-escuro);
+  border-color: var(--verde-escuro);
 }
 
 .home__projects {
@@ -354,6 +383,10 @@ button, select, input, textarea {
 }
 .home__projects__body {
   flex-direction: row;
+}
+.home__projects__body div {
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
 }
 .home__projects__body div:nth-child(3n) {
   margin-right: 0;
@@ -436,13 +469,69 @@ button, select, input, textarea {
   border-bottom: 0.0625rem dotted transparent;
 }
 
+.home__contact {
+  text-align: center;
+  background-color: var(--verde-claro);
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+@media (min-width: 768px) {
+  .home__contact {
+    text-align: left;
+    padding: 4rem 0;
+  }
+}
+@media (min-width: 768px) {
+  .home__contact__container {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.home__contact__text {
+  align-items: center;
+}
+@media (min-width: 960px) {
+  .home__contact__text {
+    padding: 0 4rem;
+  }
+}
+@media (min-width: 1200px) {
+  .home__contact__text {
+    padding: 0 6rem;
+  }
+}
+.home__contact__text h3 {
+  font-family: "Courier Prime", monospace;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+@media (min-width: 960px) {
+  .home__contact__text h3 {
+    font-size: 1.8em;
+  }
+}
+@media (min-width: 1200px) {
+  .home__contact__text h3 {
+    font-size: 2em;
+  }
+}
+.home__contact img {
+  max-width: 70%;
+  margin: 0 auto;
+  margin-top: 1.5rem;
+}
+@media (min-width: 768px) {
+  .home__contact img {
+    max-width: 450px;
+    margin-top: 0;
+  }
+}
+
 html {
   --preto: rgb(39, 48, 63);
   --verde-escuro: rgb(50, 215, 180);
   --verde: rgb(135, 235, 200);
   --verde-claro: rgb(207, 247, 233);
-  --azul-claro: rgb(177, 185, 255);
-  --rosa-claro: rgb(255, 227, 233);
   --branco: rgb(251, 249, 246);
   --branco-claro: rgb(255, 255, 255);
 }
