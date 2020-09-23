@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer">
+  <footer class="footer" id="contact">
     <div class="footer__contact">
       <a href="">
         <img src="../../assets/icons/envelope-solid.svg" alt="">

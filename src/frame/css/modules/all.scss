@@ -1,6 +1,66 @@
 @use '../body' as *;
 
 /* *********************************************************** ALL */
+
+.menu {
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem 0;
+  background-color: var(--branco);
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-bottom: 0.0625rem solid var(--branco-escuro);
+  &__container {
+    @include func-row(g-xl);
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  a {
+    font-family: 'Courier Prime', monospace;
+    font-weight: 700;
+    font-size: 0.9em;
+    &:hover {
+      color: var(--verde-escuro);
+    }
+  }
+  &__links {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    background-color: var(--preto);
+    li {
+      font-family: 'Courier Prime', monospace;
+      text-align: center;
+      padding: 0.5rem 0;
+      color: var(--branco);
+      &:hover {
+        color: var(--verde-escuro);
+      }
+    }
+    img {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      cursor: pointer;
+    }
+  }
+}
+
 .footer {
   color: var(--branco);
   background-color: var(--preto);

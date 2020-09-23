@@ -1,5 +1,5 @@
 <template>
-  <div class="home__projects">
+  <div class="home__projects" id="projects">
     <div class="home__projects__title">
       <h2><span>Projetos</span></h2>
       <p>Conheça alguns dos meus projetos pessoais, que demonstram as minhas habilidades e expressam um pouco da minha personalidade.</p>
