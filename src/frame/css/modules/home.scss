@@ -1,0 +1,354 @@
+@use '../body' as *;
+
+/* *********************************************************** HOME */
+.home__header {
+  &__container {
+    @include func-row(g-xl);
+    padding: 5rem 1.5rem 2.5rem 1.5rem;
+    background-color: var(--branco);
+    text-align: center;
+    @media (min-width: func-container(sm)) {
+      padding: 5rem 2.5rem 3rem 2.5rem;
+    }
+    @media (min-width: func-container(md)) {
+      padding: 5rem 0 0 0;
+      flex-direction: row;
+      align-items: center;
+      text-align: left;
+    }
+    @media (min-width: func-container(lg)) {
+      padding: 5rem 0 0 2.5rem;
+    }
+    @media (max-width: 1300px) and (orientation: landscape) {
+      min-height: 100vh;
+      justify-content: center;
+    }
+    @media (max-width: 650px) and (orientation: portrait) {
+      min-height: 100vh;
+      justify-content: center;
+    }
+    div {
+      @include func-col(md-6, lg-5, xl-4);
+      @media (min-width: func-container(md)) {
+        padding-right: 2rem;
+        align-self: flex-end;
+      }
+    }
+    img {
+      @include func-col(md-6, lg-7, xl-8);
+      max-width: 90%;
+      margin: 0 auto;
+      @media (min-width: func-container(lg)) {
+        max-height: 550px;
+        object-fit: contain;
+      }
+    }
+    h1 {
+      @extend %titulo;
+      margin-bottom: 1.5rem;
+      @media (min-width: func-container(md)) {
+        justify-content: flex-start;
+      }
+    }
+    p {
+      margin-bottom: 1rem;
+      @media (min-width: func-container(md)) {
+        margin-left: 0.9rem;
+      }
+    }
+    a {
+      @extend %btn;
+      align-self: center;
+      margin-top: 1rem;
+      font-size: 0.8em;
+      @media (min-width: func-container(md)) {
+        align-self: flex-start;
+        margin-left: 0.9rem;
+        margin-bottom: 4rem;
+      }
+    }
+  } 
+}
+
+
+.home__about {
+  background-color: var(--verde-claro);
+  padding: 4rem 0;
+  &__container {
+    @include func-row(g-xl);
+    text-align: center;
+    @media (min-width: func-container(sm)) {
+      padding-right: 2.5rem;
+      padding-left: 2.5rem;
+    }
+    @media (min-width: func-container(md)) {
+      flex-direction: row-reverse;
+      align-items: center;
+      text-align: left;
+    }
+    @media (min-width: func-container(lg)) {
+      padding-right: 4rem;
+      padding-left: 4rem;
+    }
+    > div {
+      @include func-col(md-6);
+      margin-bottom: 1rem;
+      align-items: center;
+      @media (min-width: func-container(md)) {
+        margin-bottom: 0;
+        padding-left: 2rem;
+        align-items: flex-start;
+      }
+      > div {
+        flex-direction: row;
+        align-items: flex-start;
+        a {
+          width: 40px;
+          height: 40px;
+          border: 0.0625rem solid var(--verde-escuro);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          &:hover {
+            background-color: var(--branco);
+          }
+          &:first-child {
+            margin-right: 0.5rem;
+            @media (min-width: func-container(md)) {
+              margin-left: 0.9rem;
+            }
+          }
+        }
+        img {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+    > img{
+      @include func-col(md-6);
+      max-width: 80%;
+      max-height: 600px;
+      margin: 0 auto;
+      object-fit: contain;
+    }
+    h2 {
+      @extend %titulo;
+      margin-bottom: 1.5rem;
+      @media (min-width: func-container(md)) {
+        justify-content: flex-start;
+      }
+    }
+    p {
+      margin-bottom: 1rem; 
+      @media (min-width: func-container(md)) {
+        margin: 0 0 1rem 0.9rem; 
+        padding-right: 3rem;
+      }
+    }
+    p a {
+      font-weight: 600;
+      border-bottom: 0.0625rem dotted var(--preto);
+      &:hover {
+        color: var(--verde-escuro);
+        border-color: var(--verde-escuro);
+      }
+    }
+  }
+}
+
+
+.home__dna {
+  padding: 4rem 0 0 0;
+  text-align: center;
+  &__container {
+    @include func-row(g-xl);
+    border-bottom: 0.0625rem solid var(--preto-claro);
+    padding-bottom: 4rem;
+    flex-wrap: nowrap;
+    @media (min-width: func-container(md)) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    > h2 {
+      @extend %titulo;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+    > p {
+      width: 100%;
+    }
+    > div {
+      width: 100%;
+      flex-wrap: nowrap;
+      @media (min-width: func-container(md)) {
+        width: calc(100% / 3);
+      }
+      img{
+        width: 70%;
+        margin: 1rem auto;
+        object-fit: fill;
+      }
+      p {
+        font-size: 0.9em;
+        padding: 0 1rem;
+        @media (min-width: func-container(lg)) {
+          padding: 0 3rem;
+        }
+      }
+    }
+  }
+}
+
+
+.home__projects {
+  padding: 4rem 0;
+  &__title {
+    @include func-row(g-sm);
+    text-align: center;
+    margin-bottom: 2rem;
+    h2 {
+      @extend %titulo;
+      margin-bottom: 1.5rem;
+    }
+  }
+  &__body {
+    @include func-row(g-xl);
+    flex-direction: row;
+    div {
+      background-repeat: no-repeat;
+      background-blend-mode: multiply;
+    }
+    div:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+  &__large {
+    @include func-col(md-12);
+    > p {
+      max-width: 600px;
+      align-self: center;
+    }
+  }
+  &__medium {
+    @include func-col(md-gutters-6);
+  }
+  &__medium, &__large {
+    padding: 3rem 1rem;
+    text-align: center;
+    border: 0.0625rem solid var(--preto);
+    margin-top: 1.5rem;
+    justify-content: center;
+    background-color: var(--branco-claro);
+    @media (min-width: func-container(lg)) {
+      padding: 4rem;
+    }
+    &:hover {
+      border-color: var(--verde-escuro);
+      background-color: var(--verde-claro);
+    }
+    > h3 {
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-top: 0.25rem;
+    }
+    > p {
+      margin: 0.5rem 0 1rem 0;
+    }
+    > span {
+      color: var(--verde-escuro);
+      font-weight: 600;
+      font-size: 0.75em;
+      letter-spacing: 0.05em;
+    }
+    > img {
+      max-width: 4rem;
+      margin: 0 auto;
+    }
+  }
+  &__links {
+    align-items: center;
+    margin-top: 2rem;
+    @media (min-width: func-container(sm)) {
+      flex-direction: row;
+      justify-content: center;
+    }
+    > a {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      &:hover {
+        > span {
+          border-color: var(--verde-escuro);
+        }
+      }
+      &:first-child {
+        margin-bottom: 0.5rem;
+        @media (min-width: func-container(sm)) {
+        margin-right: 1.5rem;
+        margin-bottom: 0;
+        }
+      }
+      > img {
+        height: 1.5rem;
+        width: 1.5rem;
+        margin-right: 0.5rem;
+      }
+      > span {
+        font-family: 'Courier Prime', monospace;
+        font-size: 0.8em;
+        font-weight: 700;
+        border-bottom: 0.0625rem dotted transparent;
+      }
+    }
+  }
+}
+
+
+.home__contact {
+  text-align: center;
+  background-color: var(--verde-claro);
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  @media (min-width: func-container(md)) {
+    text-align: left;
+    padding: 4rem 0;
+  }
+  &__container {
+    @include func-row(g-xl);
+    @media (min-width: func-container(md)) {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+  &__text {
+    @include func-col(md-6);
+    align-items: center;
+    @media (min-width: func-container(lg)) {
+      padding: 0 4rem;
+    }
+    @media (min-width: func-container(xl)) {
+      padding: 0 6rem;
+    }
+    h3 {
+      font-weight: 600;
+      margin-bottom: 1rem;
+      @media (min-width: func-container(lg)) {
+        font-size: 1.8em;
+      }
+      @media (min-width: func-container(xl)) {
+        font-size: 2em;
+      }
+    }
+  }
+  img {
+    @include func-col(md-6);
+    max-width: 70%;
+    margin: 0 auto;
+    margin-top: 1.5rem;
+    @media (min-width: func-container(md)) {
+      max-width: 450px;
+      margin-top: 0;
+    }
+  }
+}

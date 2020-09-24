@@ -1,0 +1,227 @@
+@use '../body' as *;
+
+/* *********************************************************** CURRICULO */
+
+.curriculo {
+  width: 100%;
+  padding: 0 0 1.5rem 0;
+  background-color: var(--branco);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  @media (min-width: func-container(sm)) {
+    padding: 3rem 0;
+  }
+  &__container {
+    @include func-row(g-md);
+    padding: 0;
+    @media (min-width: func-container(sm)) {
+      border: 0.0625rem solid var(--verde);
+    }
+    @media (min-width: func-container(md)) {
+      flex-direction: row-reverse;
+    }
+  }
+  &__info {
+    @include func-col(md-8);
+    padding: 1.5rem;
+  }
+  &__graphics {
+    @include func-col(md-4);
+    background-color: var(--verde-claro);
+    padding: 1.5rem;
+    justify-content: space-between;
+  }
+  &__header {
+    img {
+      margin-bottom: 2rem;
+    }
+    h3 {
+      font-family: 'Courier Prime', monospace;
+      font-size: 1.7em;
+      font-weight: 700;
+      line-height: 0.8em;
+      color: var(--verde-escuro);
+      @media (min-width: func-container(sm)) {
+        font-size: 2em;
+      }
+    }
+    span {
+      font-family: 'Courier Prime', monospace;
+      font-weight: 700;
+      @media (min-width: func-container(md)) {
+        font-size: 1.1em;
+      }
+    }
+    p {
+      margin-top: 1rem;
+      font-size: 0.8em;
+      @media (min-width: func-container(sm)) {
+        font-size: 0.9em;
+      }
+    }
+  }
+  &__academic, &__jobs {
+    margin-top: 2.5rem;
+    h4 {
+      font-family: 'Courier Prime', monospace;
+      font-weight: 700;
+      color: var(--verde-escuro);
+      margin-bottom: -0.5rem;
+    }
+  }
+  &__item {
+    font-size: 0.8em;
+    margin-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 0.0625rem solid var(--preto-claro);
+    @media (min-width: func-container(sm)) {
+      font-size: 0.9em;
+    }
+    &:last-child {
+      border: none;
+      padding-bottom: 0;
+    }
+    > div {
+      flex-direction: row;
+      margin: 0.1rem 0;
+      span:first-child {
+        font-weight: 600;
+        width: 5rem;
+        @media (min-width: func-container(sm)) {
+          width: 6rem;
+        }
+      }
+      span:last-child {
+        width: calc(100% - 5rem);
+        line-height: 1.35em;
+        @media (min-width: func-container(sm)) {
+          width: calc(100% - 6rem);
+        }
+      }
+    }
+  }
+  &__lead {
+    > img {
+      margin-bottom: 1.5rem;
+    }
+    > p {
+      font-size: 0.8em;
+      margin-bottom: 1.5rem;
+    }
+  }
+  &__skills {
+    h4 {
+      font-family: 'Courier Prime', monospace;
+      font-weight: 700;
+    }
+    label {
+      font-size: 0.8em;
+      font-weight: 600;
+      margin-top: 0.75rem;
+    }
+  }
+  &__contact {
+    margin-top: 2rem;
+    h4 {
+      font-family: 'Courier Prime', monospace;
+      font-weight: 700;
+    }
+    p, span {
+      font-size: 0.9em;
+      @media (min-width: func-container(md)) {
+        font-size: 0.7em;
+      }
+    }
+    span {
+      font-weight: 600;
+      margin-top: 0.5rem;
+    }
+  }
+  &__links {
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 1.5rem;
+    > a {
+      @extend %btn;
+      font-size: 0.8em;
+      margin: 0 0.5rem;
+      cursor: pointer;
+    }
+  }
+}
+
+
+/* *********************************************************** METER */
+$form-meter-optimum: var(--verde-escuro); 
+$form-meter-optimum-over: var(--verde-escuro);
+$form-meter-sub-optimum: #FFFF00;
+$form-meter-sub-optimum-over: #DDDD00;
+$form-meter-sub-sub-optimum: #FF0000;
+$form-meter-sub-sub-optimum-over: #BB0000;
+$form-meter-back: var(--preto);
+$form-meter-back-over: var(--preto);
+$form-meter-height: 10px;
+$form-meter-radius: 0;
+
+meter {
+  height: $form-meter-height;
+  border-radius: $form-meter-radius;
+  background: $form-meter-back;
+  width: 100%;
+  &:hover {
+    background: $form-meter-back-over;
+  }
+  &::-webkit-meter-bar {
+    height: $form-meter-height;
+    background: $form-meter-back;
+    border-radius: $form-meter-radius;
+    border: none;
+    &:hover {
+      background: $form-meter-back-over;
+    }
+  }
+  &::-webkit-meter-optimum-value  { 
+    background: $form-meter-optimum; 
+    border-radius: $form-meter-radius;
+    &:hover {
+      background: $form-meter-optimum-over; 
+    }
+  }
+  &:-moz-meter-optimum::-moz-meter-bar  { 
+    background: $form-meter-optimum;  
+    border-radius: $form-meter-radius;
+    &:hover {
+      background: $form-meter-optimum-over; 
+    }
+  }
+  &::-webkit-meter-suboptimum-value { 
+    background: $form-meter-sub-optimum;
+    border-radius: $form-meter-radius;
+    &:hover {
+      background: $form-meter-sub-optimum-over;
+    }
+  }
+  &:-moz-meter-sub-optimum::-moz-meter-bar { 
+    background: $form-meter-sub-optimum;
+    border-radius: $form-meter-radius;
+    &:hover {
+      background: $form-meter-sub-optimum-over;
+    }
+  }
+  &::-webkit-meter-even-less-good-value { 
+    background: $form-meter-sub-sub-optimum; 
+    border-radius: $form-meter-radius;
+    &:hover {
+      background: $form-meter-sub-sub-optimum-over;
+    }
+  }
+  &:-moz-meter-sub-sub-optimum::-moz-meter-bar { 
+    background: $form-meter-sub-sub-optimum; 
+    border-radius: $form-meter-radius;
+    &:hover {
+      background: $form-meter-sub-sub-optimum-over;
+    }
+  }
+}

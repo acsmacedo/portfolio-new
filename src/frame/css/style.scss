@@ -1,0 +1,67 @@
+@use 'body' as *;
+
+// *********************************************************** MODULES
+@use './modules/all';
+@use './modules/home';
+@use './modules/curriculo';
+
+// *********************************************************** FONTS
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Work+Sans:wght@400;600&display=swap');
+
+html {
+  --preto: rgb(39, 48, 63);
+  --preto-claro: rgb(180, 180, 180);
+  --verde-escuro: rgb(50, 215, 180);
+  --verde: rgb(135, 235, 200);
+  --verde-claro: rgb(207, 247, 233);
+  --branco-escuro: rgb(231, 229, 226);
+  --branco: rgb(251, 249, 246);
+  --branco-claro: rgb(255, 255, 255);
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+  background-color: var(--branco);
+  color: var(--preto);
+}
+
+h1 {
+  font-size: 2em;
+  @media (min-width: func-container(sm)) {
+    font-size: 2.4em;
+  }
+  @media (min-width: func-container(lg)) {
+    font-size: 2.6em;
+  }
+}
+
+h2 {
+  font-size: 2.2em;
+  @media (min-width: func-container(sm)) {
+    font-size: 2.5em;
+  }
+}
+
+h3 {
+  font-size: 1.3em;
+  @media (min-width: func-container(sm)) {
+    font-size: 1.5em;
+  }
+}
+
+h4 {
+  font-size: 1.2em;
+  @media (min-width: func-container(sm)) {
+    font-size: 1.3em;
+  }
+}
+
+p {
+  font-size: 0.9em;
+  line-height: 1.5em;
+  letter-spacing: 0.02em;
+  @media (min-width: func-container(sm)) {
+    font-size: 1em;
+  }
+}

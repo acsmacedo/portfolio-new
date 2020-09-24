@@ -1,0 +1,134 @@
+@use '../body' as *;
+
+/* *********************************************************** ALL */
+
+.menu {
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem 0;
+  background-color: var(--branco);
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-bottom: 0.0625rem solid var(--branco-escuro);
+  &__container {
+    @include func-row(g-xl);
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  a {
+    font-family: 'Courier Prime', monospace;
+    font-weight: 700;
+    font-size: 0.9em;
+  }
+  &__links {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    background-color: var(--preto);
+    li {
+      font-size: 2em;
+      font-family: 'Courier Prime', monospace;
+      text-align: center;
+      padding: 0.5rem 0;
+      color: var(--branco);
+      &:hover {
+        color: var(--verde-escuro);
+      }
+    }
+    img {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      cursor: pointer;
+    }
+  }
+}
+
+.footer {
+  color: var(--branco);
+  background-color: var(--preto);
+  padding: 2rem;
+  text-align: center;
+  @media (min-width: func-container(md)) {
+    padding: 4rem 2rem;
+  }
+  &__contact {
+    @include func-row(g-xl);
+    font-size: 0.8em;
+    align-items: center;
+    padding: 0 0 1rem 0;
+    @media (min-width: func-container(sm)) {
+      font-size: 1em;
+      flex-direction: row;
+      justify-content: center;
+    }
+    > a {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      &:hover {
+        span {
+          border-color: var(--verde-escuro);
+        }
+      }
+      @media (min-width: func-container(sm)) {
+        &:first-child {
+          margin-right: 1.5rem;
+        }
+      }
+      > img {
+        width: 20px;
+        height: 20px;
+        margin-right: 0.5rem;
+        @media (min-width: func-container(sm)) {
+          width: 25px;
+          height: 25px;
+        }
+      }
+      > span {
+        border-bottom: 0.0625rem dotted transparent;
+      }
+    }
+  }
+  &__copy {
+    @include func-row(g-xl);
+    font-size: 0.8em;
+    padding: 1rem 0 0 0;
+    border-top: 0.0625rem solid var(--verde-escuro);
+    > div {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 0.1rem;
+      > img {
+        width: 1rem;
+        height: 1rem;
+        margin: 0 0.5rem;
+      }
+      a {
+        font-weight: 600;
+      }
+    }
+    a {
+      border-bottom: 0.0625rem dotted transparent;
+      &:hover {
+        border-color: var(--verde-escuro);
+      }
+    }
+  }
+}
