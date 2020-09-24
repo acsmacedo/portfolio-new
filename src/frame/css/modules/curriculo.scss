@@ -3,15 +3,21 @@
 /* *********************************************************** CURRICULO */
 
 .curriculo {
-  padding: 2rem 0;
+  width: 100%;
+  padding: 0 0 1.5rem 0;
+  background-color: var(--branco);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
   @media (min-width: func-container(sm)) {
-    padding: 3rem 2rem 3rem 2rem;
+    padding: 3rem 0;
   }
   &__container {
     @include func-row(g-md);
     padding: 0;
     @media (min-width: func-container(sm)) {
-      border: 0.0625rem solid var(--branco-escuro);
+      border: 0.0625rem solid var(--preto);
     }
     @media (min-width: func-container(md)) {
       flex-direction: row-reverse;
@@ -19,7 +25,6 @@
   }
   &__info {
     @include func-col(md-8);
-    flex-wrap: nowrap;
     padding: 1.5rem;
   }
   &__graphics {
@@ -27,9 +32,6 @@
     background-color: var(--verde-claro);
     padding: 1.5rem;
     justify-content: space-between;
-    img {
-      margin-bottom: 1rem;
-    }
   }
   &__header {
     img {
@@ -37,25 +39,35 @@
     }
     h3 {
       font-family: 'Courier Prime', monospace;
+      font-size: 1.7em;
       font-weight: 700;
       line-height: 0.8em;
       color: var(--verde-escuro);
-      @media (min-width: func-container(md)) {
+      @media (min-width: func-container(sm)) {
         font-size: 2em;
       }
     }
     span {
       font-family: 'Courier Prime', monospace;
       font-weight: 700;
-      margin-bottom: 1rem;
       @media (min-width: func-container(md)) {
         font-size: 1.1em;
       }
     }
+    p {
+      margin-top: 1rem;
+      font-size: 0.8em;
+      @media (min-width: func-container(sm)) {
+        font-size: 0.9em;
+      }
+    }
+    a {
+      font-weight: 600;
+      color: var(--verde-escuro);
+    }
   }
   &__academic, &__jobs {
-    margin-top: 1.5rem;
-    padding-top: 1.5rem;
+    margin-top: 2.5rem;
     h4 {
       font-family: 'Courier Prime', monospace;
       font-weight: 700;
@@ -64,12 +76,12 @@
     }
   }
   &__item {
+    font-size: 0.8em;
     margin-top: 0.75rem;
     padding-bottom: 0.75rem;
     border-bottom: 0.0625rem solid var(--preto-claro);
-    font-size: 0.8em;
     @media (min-width: func-container(sm)) {
-      font-size: 1em;
+      font-size: 0.9em;
     }
     &:last-child {
       border: none;
@@ -82,15 +94,25 @@
         font-weight: 600;
         width: 5rem;
         @media (min-width: func-container(sm)) {
-          width: 6.5rem;
+          width: 6rem;
         }
       }
       span:last-child {
         width: calc(100% - 5rem);
+        line-height: 1.35em;
         @media (min-width: func-container(sm)) {
-          width: calc(100% - 6.5rem);
+          width: calc(100% - 6rem);
         }
       }
+    }
+  }
+  &__lead {
+    > img {
+      margin-bottom: 1.5rem;
+    }
+    > p {
+      font-size: 0.8em;
+      margin-bottom: 1.5rem;
     }
   }
   &__skills {
@@ -101,19 +123,24 @@
     label {
       font-size: 0.8em;
       font-weight: 600;
-      margin-top: 0.5rem;
+      margin-top: 0.75rem;
     }
   }
   &__contact {
-    font-size: 0.7em;
     margin-top: 2rem;
+    h4 {
+      font-family: 'Courier Prime', monospace;
+      font-weight: 700;
+    }
+    p, span {
+      font-size: 0.9em;
+      @media (min-width: func-container(md)) {
+        font-size: 0.7em;
+      }
+    }
     span {
-      width: 100%;
       font-weight: 600;
       margin-top: 0.5rem;
-    }
-    p {
-      width: 100%;
     }
   }
   &__links {
@@ -130,7 +157,7 @@
 }
 
 
-
+/* *********************************************************** METER */
 $form-meter-optimum: var(--verde-escuro); 
 $form-meter-optimum-over: var(--verde-escuro);
 $form-meter-sub-optimum: #FFFF00;
@@ -141,7 +168,6 @@ $form-meter-back: var(--preto);
 $form-meter-back-over: var(--preto);
 $form-meter-height: 10px;
 $form-meter-radius: 0;
-
 
 meter {
   height: $form-meter-height;

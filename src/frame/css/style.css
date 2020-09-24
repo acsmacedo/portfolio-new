@@ -490,7 +490,6 @@ button, select, input, textarea {
 }
 .home__topic__container > p {
   width: 100%;
-  margin-bottom: 2rem;
 }
 .home__topic__container > div {
   width: 100%;
@@ -504,6 +503,10 @@ button, select, input, textarea {
 .home__topic__container > div img {
   padding: 2rem;
   object-fit: fill;
+}
+.home__topic__container > div p {
+  font-size: 0.8em;
+  padding: 0 3rem;
 }
 
 .home__projects {
@@ -663,11 +666,17 @@ button, select, input, textarea {
 
 /* *********************************************************** CURRICULO */
 .curriculo {
-  padding: 2rem 0;
+  width: 100%;
+  padding: 0 0 1.5rem 0;
+  background-color: var(--branco);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
 @media (min-width: 576px) {
   .curriculo {
-    padding: 3rem 2rem 3rem 2rem;
+    padding: 3rem 0;
   }
 }
 .curriculo__container {
@@ -675,7 +684,7 @@ button, select, input, textarea {
 }
 @media (min-width: 576px) {
   .curriculo__container {
-    border: 0.0625rem solid var(--branco-escuro);
+    border: 0.0625rem solid var(--preto);
   }
 }
 @media (min-width: 768px) {
@@ -684,7 +693,6 @@ button, select, input, textarea {
   }
 }
 .curriculo__info {
-  flex-wrap: nowrap;
   padding: 1.5rem;
 }
 .curriculo__graphics {
@@ -692,19 +700,17 @@ button, select, input, textarea {
   padding: 1.5rem;
   justify-content: space-between;
 }
-.curriculo__graphics img {
-  margin-bottom: 1rem;
-}
 .curriculo__header img {
   margin-bottom: 2rem;
 }
 .curriculo__header h3 {
   font-family: "Courier Prime", monospace;
+  font-size: 1.7em;
   font-weight: 700;
   line-height: 0.8em;
   color: var(--verde-escuro);
 }
-@media (min-width: 768px) {
+@media (min-width: 576px) {
   .curriculo__header h3 {
     font-size: 2em;
   }
@@ -712,16 +718,27 @@ button, select, input, textarea {
 .curriculo__header span {
   font-family: "Courier Prime", monospace;
   font-weight: 700;
-  margin-bottom: 1rem;
 }
 @media (min-width: 768px) {
   .curriculo__header span {
     font-size: 1.1em;
   }
 }
+.curriculo__header p {
+  margin-top: 1rem;
+  font-size: 0.8em;
+}
+@media (min-width: 576px) {
+  .curriculo__header p {
+    font-size: 0.9em;
+  }
+}
+.curriculo__header a {
+  font-weight: 600;
+  color: var(--verde-escuro);
+}
 .curriculo__academic, .curriculo__jobs {
-  margin-top: 1.5rem;
-  padding-top: 1.5rem;
+  margin-top: 2.5rem;
 }
 .curriculo__academic h4, .curriculo__jobs h4 {
   font-family: "Courier Prime", monospace;
@@ -730,14 +747,14 @@ button, select, input, textarea {
   margin-bottom: -0.75rem;
 }
 .curriculo__item {
+  font-size: 0.8em;
   margin-top: 0.75rem;
   padding-bottom: 0.75rem;
   border-bottom: 0.0625rem solid var(--preto-claro);
-  font-size: 0.8em;
 }
 @media (min-width: 576px) {
   .curriculo__item {
-    font-size: 1em;
+    font-size: 0.9em;
   }
 }
 .curriculo__item:last-child {
@@ -754,16 +771,24 @@ button, select, input, textarea {
 }
 @media (min-width: 576px) {
   .curriculo__item > div span:first-child {
-    width: 6.5rem;
+    width: 6rem;
   }
 }
 .curriculo__item > div span:last-child {
   width: calc(100% - 5rem);
+  line-height: 1.35em;
 }
 @media (min-width: 576px) {
   .curriculo__item > div span:last-child {
-    width: calc(100% - 6.5rem);
+    width: calc(100% - 6rem);
   }
+}
+.curriculo__lead > img {
+  margin-bottom: 1.5rem;
+}
+.curriculo__lead > p {
+  font-size: 0.8em;
+  margin-bottom: 1.5rem;
 }
 .curriculo__skills h4 {
   font-family: "Courier Prime", monospace;
@@ -772,19 +797,26 @@ button, select, input, textarea {
 .curriculo__skills label {
   font-size: 0.8em;
   font-weight: 600;
-  margin-top: 0.5rem;
+  margin-top: 0.75rem;
 }
 .curriculo__contact {
-  font-size: 0.7em;
   margin-top: 2rem;
 }
+.curriculo__contact h4 {
+  font-family: "Courier Prime", monospace;
+  font-weight: 700;
+}
+.curriculo__contact p, .curriculo__contact span {
+  font-size: 0.9em;
+}
+@media (min-width: 768px) {
+  .curriculo__contact p, .curriculo__contact span {
+    font-size: 0.7em;
+  }
+}
 .curriculo__contact span {
-  width: 100%;
   font-weight: 600;
   margin-top: 0.5rem;
-}
-.curriculo__contact p {
-  width: 100%;
 }
 .curriculo__links {
   flex-direction: row;
@@ -797,6 +829,7 @@ button, select, input, textarea {
   cursor: pointer;
 }
 
+/* *********************************************************** METER */
 meter {
   height: 10px;
   border-radius: 0;
@@ -899,12 +932,21 @@ h2 {
   }
 }
 
-h3, h4 {
+h3 {
   font-size: 1.3em;
 }
 @media (min-width: 576px) {
-  h3, h4 {
+  h3 {
     font-size: 1.5em;
+  }
+}
+
+h4 {
+  font-size: 1.2em;
+}
+@media (min-width: 576px) {
+  h4 {
+    font-size: 1.3em;
   }
 }
 

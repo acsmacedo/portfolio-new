@@ -6,7 +6,8 @@
           <img src="../../assets/img/testemonials-2.jpg" alt="" v-if="showImage">
           <h3>Anderson Macedo</h3>
           <span>Desenvolvedor front-end</span>
-          <p>Focado. Flexível. Detalhista. É a partir dessas características que me posiciono diante das minhas tarefas e deveres, tentando aliar, da melhor forma possível, o design com o tentando aliar, da melhor forma possível, o design com o</p>
+          <p>Desde o início da minha carreira atuei como designer gráfico, porém, neste novo ciclo da minha vida, busco ingressar na área de desenvolvimento front-end.</p>
+          <p>Comecei a buscar conhecimento nessa área no início de 2020 e, desde então, desenvolvi alguns projetos pessoais. Tenho facilidade e interesse em aprender novas tecnologias e linguagens.</p>
         </div>
 
         <div class="curriculo__academic">
@@ -59,7 +60,7 @@
             </div>
             <div>
               <span>Atividades:</span>
-              <span>Criação de banners, folhetos e materiais gráficos em geral. Criação de sites, landing page</span>
+              <span>Criação de peças promocionais, artes para redes sociais e eventos, banners para site.</span>
             </div>
           </div>
 
@@ -78,7 +79,7 @@
             </div>
             <div>
               <span>Atividades:</span>
-              <span>Criação de banners, folhetos e materiais gráficos em geral. Criação de sites, landing page</span>
+              <span>Criação de banners, folhetos e materiais gráficos em geral. Criação de sites, landing page, redes sociais e peças digitais em geral.</span>
             </div>
           </div>
      
@@ -93,46 +94,51 @@
             </div>
             <div>
               <span>Período:</span>
-              <span>04/2019 a 07/2019</span>
+              <span>10/2015 a 10/2016 (estágio)</span>
+            </div>
+            <div>
+              <span></span>
+              <span>10/2016 a 10/2018</span>
             </div>
             <div>
               <span>Atividades:</span>
-              <span>Criação de banners, folhetos e materiais gráficos em geral. Criação de sites, landing page</span>
+              <span>Diagramação de catálogos, criação de email MKT, materiais de PDV, desenvolvimento gráfico de produtos (cadernos, agendas e estojos).</span>
             </div>
           </div>
         </div>
       </div>
 
       <div class="curriculo__graphics">
-        <div>
+        <div class="curriculo__lead">
           <img src="../../assets/img/testemonials-2.jpg" alt="" v-if="!showImage">
-          
+          <p>"Organizado. Flexível. Detalhista. É a partir desses atributos que me posiciono diante das minhas tarefas e deveres".</p>
           <div class="curriculo__skills">
             <h4>Habilidades</h4>
-            <label for="">HTML</label>
-            <meter min="0" max="100" value="50"></meter>
+            <label for="html">HTML</label>
+            <meter min="0" max="100" value="90" id="html"></meter>
 
-            <label for="">CSS</label>
-            <meter min="0" max="100" value="50"></meter>
+            <label for="css">CSS</label>
+            <meter min="0" max="100" value="90" id="css"></meter>
 
-            <label for="">Sass</label>
-            <meter min="0" max="100" value="50"></meter>
+            <label for="sass">Sass</label>
+            <meter min="0" max="100" value="90" id="sass"></meter>
 
-            <label for="">Javascript</label>
-            <meter min="0" max="100" value="50"></meter>
+            <label for="javascript">Javascript</label>
+            <meter min="0" max="100" value="70" id="javascript"></meter>
 
-            <label for="">JQuery</label>
-            <meter min="0" max="100" value="50"></meter>
+            <label for="jquery">JQuery</label>
+            <meter min="0" max="100" value="60" id="jquery"></meter>
 
-            <label for="">Vue</label>
-            <meter min="0" max="100" value="50"></meter>
+            <label for="vue">Vue</label>
+            <meter min="0" max="100" value="70" id="vue"></meter>
             
-            <label for="">Git</label>
-            <meter min="0" max="100" value="50"></meter>
+            <label for="git">Git / Github</label>
+            <meter min="0" max="100" value="90" id="git"></meter>
           </div>
         </div>
 
         <div class="curriculo__contact">
+          <h4>Contato</h4>
           <span>E-mail:</span>
           <p>andy.carlos.souza@hotmail.com</p>
           <span>Endereço:</span>
@@ -140,15 +146,14 @@
           <span>Telefone:</span>
           <p>(11) 4171-1350 | (11) 97032-9784</p>
           <span>Portfólio:</span>
-          <p>www.acsmacedo.netlify.app</p>
+          <p><a href="https://www.acsmacedo.netlify.app">www.acsmacedo.netlify.app</a></p>
         </div>
       </div>
     </div>
 
     <div class="curriculo__links">
       <a v-on:click.prevent="backPage">voltar</a>
-      
-      <a>Baixar</a>
+      <a href="/curriculo.pdf">Baixar</a>
     </div>
   </section>
 </template>

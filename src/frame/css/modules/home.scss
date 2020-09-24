@@ -173,7 +173,6 @@
     }
     > p {
       width: 100%;
-      margin-bottom: 2rem;
     }
     > div {
       width: 100%;
@@ -185,7 +184,10 @@
         padding: 2rem;
         object-fit: fill;
       }
-
+      p {
+        font-size: 0.8em;
+        padding: 0 3rem;
+      }
     }
   }
 }
