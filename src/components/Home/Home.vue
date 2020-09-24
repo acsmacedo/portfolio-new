@@ -1,12 +1,10 @@
 <template>
-  <div>
-    
+  <div class="home">
     <HomeHeader />
     <HomeAbout />
-    <HomeTopic />
+    <HomeDna />
     <HomeProjects />
     <HomeContact />
-    
   </div>
 </template>
 
@@ -14,7 +12,7 @@
   
   import HomeHeader from './HomeHeader.vue'
   import HomeAbout from './HomeAbout.vue'
-  import HomeTopic from './HomeTopic.vue'
+  import HomeDna from './HomeDna.vue'
   import HomeProjects from './HomeProjects.vue'
   import HomeContact from './HomeContact.vue'
 
@@ -23,9 +21,25 @@
     components: {
       HomeHeader,
       HomeAbout,
-      HomeTopic,
+      HomeDna,
       HomeProjects,
       HomeContact
+    },
+    mounted() {
+      const menu = document.querySelector('.menu');
+      const footer = document.querySelector('.footer');
+
+      menu.style.opacity = 1;
+      footer.style.opacity = 1;
+      
+      window.scrollTo(0, 0);
+    },
+    beforeDestroy() {
+      const menu = document.querySelector('.menu');
+      const footer = document.querySelector('.footer');
+
+      menu.style.opacity = 0;
+      footer.style.opacity = 0;
     }
   }
 </script>

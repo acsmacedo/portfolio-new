@@ -3,7 +3,7 @@
     <div class="curriculo__container">
       <div class="curriculo__info">
         <div class="curriculo__header">
-          <img src="../../assets/img/testemonials-2.jpg" alt="" v-if="showImage">
+          <img src="../../assets/img/anderson-macedo.jpg" alt="Anderson Macedo" v-if="showImage">
           <h3>Anderson Macedo</h3>
           <span>Desenvolvedor front-end</span>
           <p>Desde o início da minha carreira atuei como designer gráfico, porém, neste novo ciclo da minha vida, busco ingressar na área de desenvolvimento front-end.</p>
@@ -44,7 +44,7 @@
         </div>
         
         <div class="curriculo__jobs">
-          <h4>Experiência</h4>
+          <h4>Profissional</h4>
           <div class="curriculo__item">
             <div>
               <span>Instituiçao:</span>
@@ -110,7 +110,7 @@
 
       <div class="curriculo__graphics">
         <div class="curriculo__lead">
-          <img src="../../assets/img/testemonials-2.jpg" alt="" v-if="!showImage">
+          <img src="../../assets/img/anderson-macedo.jpg" alt="Anderson Macedo" v-if="!showImage">
           <p>"Organizado. Flexível. Detalhista. É a partir desses atributos que me posiciono diante das minhas tarefas e deveres".</p>
           <div class="curriculo__skills">
             <h4>Habilidades</h4>
@@ -122,6 +122,9 @@
 
             <label for="sass">Sass</label>
             <meter min="0" max="100" value="90" id="sass"></meter>
+
+            <label for="bootstrap">Bootstrap</label>
+            <meter min="0" max="100" value="60" id="bootstrap"></meter>
 
             <label for="javascript">Javascript</label>
             <meter min="0" max="100" value="70" id="javascript"></meter>
@@ -152,7 +155,7 @@
     </div>
 
     <div class="curriculo__links">
-      <a v-on:click.prevent="backPage">voltar</a>
+      <router-link to="/">Voltar</router-link>
       <a href="/curriculo.pdf">Baixar</a>
     </div>
   </section>
@@ -170,18 +173,11 @@
       showImageChange() {
         const width = window.innerWidth;
         width < 768 ? this.showImage = true : this.showImage = false; 
-      },
-      backPage() {
-        this.$router.back();
       }
     },
-     mounted() {
+    mounted() {
       this.showImageChange();
-      
-      window.addEventListener('resize', () => {
-        this.showImageChange();
-      })
-
+      window.addEventListener('resize', () => this.showImageChange());
       window.scrollTo(0, 0);
     }
   }

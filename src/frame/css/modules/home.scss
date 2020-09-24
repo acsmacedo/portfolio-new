@@ -19,6 +19,14 @@
     @media (min-width: func-container(lg)) {
       padding: 5rem 0 0 2.5rem;
     }
+    @media (max-width: 1300px) and (orientation: landscape) {
+      min-height: 100vh;
+      justify-content: center;
+    }
+    @media (max-width: 650px) and (orientation: portrait) {
+      min-height: 100vh;
+      justify-content: center;
+    }
     div {
       @include func-col(md-6, lg-5, xl-4);
       @media (min-width: func-container(md)) {
@@ -33,11 +41,9 @@
       @media (min-width: func-container(lg)) {
         max-height: 550px;
         object-fit: contain;
-        
       }
     }
     h1 {
-      --shadow: var(--verde);
       @extend %titulo;
       margin-bottom: 1.5rem;
       @media (min-width: func-container(md)) {
@@ -48,13 +54,12 @@
       margin-bottom: 1rem;
       @media (min-width: func-container(md)) {
         margin-left: 0.9rem;
-
       }
     }
     a {
       @extend %btn;
       align-self: center;
-      margin-bottom: 2rem;
+      margin-top: 1rem;
       font-size: 0.8em;
       @media (min-width: func-container(md)) {
         align-self: flex-start;
@@ -98,8 +103,8 @@
         flex-direction: row;
         align-items: flex-start;
         a {
-          width: 35px;
-          height: 35px;
+          width: 40px;
+          height: 40px;
           border: 0.0625rem solid var(--verde-escuro);
           display: flex;
           justify-content: center;
@@ -109,15 +114,14 @@
           }
           &:first-child {
             margin-right: 0.5rem;
-            
             @media (min-width: func-container(md)) {
               margin-left: 0.9rem;
             }
           }
         }
         img {
-          width: 25px;
-          height: 25px;
+          width: 30px;
+          height: 30px;
         }
       }
     }
@@ -129,7 +133,6 @@
       object-fit: contain;
     }
     h2 {
-      --shadow: var(--verde);
       @extend %titulo;
       margin-bottom: 1.5rem;
       @media (min-width: func-container(md)) {
@@ -154,7 +157,8 @@
   }
 }
 
-.home__topic {
+
+.home__dna {
   padding: 4rem 0 0 0;
   text-align: center;
   &__container {
@@ -181,16 +185,21 @@
         width: calc(100% / 3);
       }
       img{
-        padding: 2rem;
+        width: 70%;
+        margin: 1rem auto;
         object-fit: fill;
       }
       p {
-        font-size: 0.8em;
-        padding: 0 3rem;
+        font-size: 0.9em;
+        padding: 0 1rem;
+        @media (min-width: func-container(lg)) {
+          padding: 0 3rem;
+        }
       }
     }
   }
 }
+
 
 .home__projects {
   padding: 4rem 0;
@@ -294,6 +303,7 @@
     }
   }
 }
+
 
 .home__contact {
   text-align: center;

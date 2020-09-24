@@ -5,7 +5,7 @@
         <h3>Precisa de um profissional com as habilidades descritas acima?</h3>
         <p>Entre em contato e vamos bater um papo. Adoraria contribuir com seus objetivos!</p>
       </div>
-      <img src="../../assets/illustrations/home-contact.svg" alt="">
+      <img src="../../assets/illustrations/home-contact.svg" alt="Três pessoas se cumprimentando, em sinal de acordo">
     </div>
   </section>
 </template>

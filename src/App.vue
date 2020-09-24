@@ -2,7 +2,9 @@
   <div id="app">
     <Menu />
     <MenuLinks />
-    <router-view/>
+    <transition name="transition" mode="out-in">
+      <router-view />
+    </transition>
     <Footer />
   </div>
 </template>
@@ -21,3 +23,17 @@
     }
   }
 </script>
+
+<style lang="scss">
+  .transition-enter, .transition-leave-to {
+   opacity: 0;
+  }
+  
+  .transition-enter-active { 
+    transition: opacity 1s linear;
+  }
+
+  .transition-leave-active { 
+    transition: opacity 0.5s ease-in;
+  }  
+</style>

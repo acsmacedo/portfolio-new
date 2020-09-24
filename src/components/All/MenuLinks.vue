@@ -1,6 +1,6 @@
 <template>
   <ul class="menu__links">
-    <img src="../../assets/icons/times-solid.svg" alt="" v-on:click="closeMenu">
+    <img src="../../assets/icons/times-solid.svg" alt="fechar" v-on:click="closeMenu">
     <li v-on:click="closeMenu"><a href="#home">Home</a></li>
     <li v-on:click="closeMenu"><a href="#about">Sobre mim</a></li>
     <li v-on:click="closeMenu"><a href="#dna">Meu DNA</a></li>

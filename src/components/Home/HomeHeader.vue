@@ -6,11 +6,11 @@
           <span>Boas-vindas!</span>
         </h1>
         <p>Este é meu portfólio. Aqui você vai encontrar um pouco sobre mim, meu trabalho e projetos!</p>
-        <img v-if="showImage" src="../../assets/illustrations/home-header.svg" alt="">
+        <img v-if="showImage" src="../../assets/illustrations/home-header.svg" alt="Mãos digitando em um notebook, como se estivesse trabalhando">
         <a href="#about">Vamos lá!</a>
       </div>
       
-      <img v-if="!showImage" src="../../assets/illustrations/home-header-large.svg" alt="">
+      <img v-if="!showImage" src="../../assets/illustrations/home-header-large.svg" alt="Mãos digitando em um notebook, como se estivesse trabalhando">
     </div>
   </header>
 </template>
@@ -31,10 +31,7 @@
     },
     mounted() {
       this.showImageChange();
-      
-      window.addEventListener('resize', () => {
-        this.showImageChange();
-      })
+      window.addEventListener('resize', () => this.showImageChange());
     }
   }
 </script>

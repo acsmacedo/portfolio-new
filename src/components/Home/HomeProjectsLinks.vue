@@ -1,11 +1,11 @@
 <template>
   <div class="home__projects__links">
     <a :href="online">
-      <img src="../../assets/icons/eye-solid.svg" alt="">
+      <img src="../../assets/icons/eye-solid.svg">
       <span>ver online</span>
     </a>
     <a :href="code">
-      <img src="../../assets/icons/code-solid.svg" alt="">
+      <img src="../../assets/icons/code-solid.svg">
       <span>ver código</span>
     </a>
   </div>
