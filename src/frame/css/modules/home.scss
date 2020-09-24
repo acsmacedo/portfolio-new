@@ -11,13 +11,13 @@
       padding: 5rem 2.5rem 3rem 2.5rem;
     }
     @media (min-width: func-container(md)) {
-      padding: 5rem 0 0 2.5rem;
+      padding: 5rem 0 0 0;
       flex-direction: row;
       align-items: center;
       text-align: left;
     }
     @media (min-width: func-container(lg)) {
-      padding: 5rem 0 0 4rem;
+      padding: 5rem 0 0 2.5rem;
     }
     div {
       @include func-col(md-6, lg-5, xl-4);
@@ -73,7 +73,8 @@
     @include func-row(g-xl);
     text-align: center;
     @media (min-width: func-container(sm)) {
-      padding: 3rem 2.5rem;
+      padding-right: 2.5rem;
+      padding-left: 2.5rem;
     }
     @media (min-width: func-container(md)) {
       flex-direction: row-reverse;
@@ -81,7 +82,8 @@
       text-align: left;
     }
     @media (min-width: func-container(lg)) {
-      padding: 4rem;
+      padding-right: 4rem;
+      padding-left: 4rem;
     }
     > div {
       @include func-col(md-6);
@@ -148,6 +150,42 @@
         color: var(--verde-escuro);
         border-color: var(--verde-escuro);
       }
+    }
+  }
+}
+
+.home__topic {
+  padding: 4rem 0 0 0;
+  text-align: center;
+  &__container {
+    @include func-row(g-xl);
+    border-bottom: 0.0625rem solid var(--preto-claro);
+    padding-bottom: 4rem;
+    flex-wrap: nowrap;
+    @media (min-width: func-container(md)) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    > h2 {
+      @extend %titulo;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+    > p {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+    > div {
+      width: 100%;
+      flex-wrap: nowrap;
+      @media (min-width: func-container(md)) {
+        width: calc(100% / 3);
+      }
+      img{
+        padding: 2rem;
+        object-fit: fill;
+      }
+
     }
   }
 }
@@ -281,8 +319,7 @@
       padding: 0 6rem;
     }
     h3 {
-      font-family: 'Courier Prime', monospace;
-      font-weight: 700;
+      font-weight: 600;
       margin-bottom: 1rem;
       @media (min-width: func-container(lg)) {
         font-size: 1.8em;

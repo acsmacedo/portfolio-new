@@ -3,12 +3,14 @@
 // *********************************************************** MODULES
 @use './modules/all';
 @use './modules/home';
+@use './modules/curriculo';
 
 // *********************************************************** FONTS
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Work+Sans:wght@400;600&display=swap');
 
 html {
   --preto: rgb(39, 48, 63);
+  --preto-claro: rgb(159, 168, 183);
   --verde-escuro: rgb(50, 215, 180);
   --verde: rgb(135, 235, 200);
   --verde-claro: rgb(207, 247, 233);
@@ -41,7 +43,7 @@ h2 {
   }
 }
 
-h3 {
+h3, h4 {
   font-size: 1.3em;
   @media (min-width: func-container(sm)) {
     font-size: 1.5em;

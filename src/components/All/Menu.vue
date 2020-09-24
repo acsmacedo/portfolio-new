@@ -1,7 +1,8 @@
 <template>
   <nav class="menu">
     <div class="menu__container">
-      <a href="">Anderson Macedo</a>
+      <a href="#home" v-if="route">Anderson Macedo</a>
+      <router-link to="/" v-else>Anderson Macedo</router-link>
       <img src="../../assets/icons/bars-solid.svg" alt="" v-on:click="openMenu">
     </div>
   </nav>
@@ -10,24 +11,16 @@
 <script>
   export default {
     name: 'Menu',
+    computed: {
+      route() {
+        return this.$route.path === '/' ? true : false;
+      }
+    },
     methods: {
       openMenu() {
         const links = document.querySelector('.menu__links');
         links.style.display = 'flex';
-      },
-      hideMenu() {
-        const menu = document.querySelector('.menu');
-        let prevScrollpos = window.pageYOffset;
-
-        window.addEventListener('scroll', () => {
-          let currentScrollPos = window.pageYOffset;
-          prevScrollpos > currentScrollPos ?  menu.style.top = "0" : menu.style.top = "-50px";
-          prevScrollpos = currentScrollPos;
-        })
       }
-    },
-    mounted() {
-      //this.hideMenu();
     }
   }
 </script>

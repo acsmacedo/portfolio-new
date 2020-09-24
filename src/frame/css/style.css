@@ -56,7 +56,7 @@ button, select, input, textarea {
 }
 
 /* *********************************************************** ELEMENTS */
-.home__header__container a {
+.curriculo__links > a, .home__header__container a {
   font-family: "Courier Prime", monospace;
   font-weight: 700;
   text-transform: lowercase;
@@ -69,12 +69,12 @@ button, select, input, textarea {
   outline: none;
 }
 
-.home__header__container h1, .home__about__container h2, .home__projects__title h2 {
+.home__header__container h1, .home__about__container h2, .home__topic__container > h2, .home__projects__title h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-.home__header__container h1 span, .home__about__container h2 span, .home__projects__title h2 span {
+.home__header__container h1 span, .home__about__container h2 span, .home__topic__container > h2 span, .home__projects__title h2 span {
   font-family: "Courier Prime", monospace;
   font-size: 1em;
   line-height: 0.45em;
@@ -86,14 +86,14 @@ button, select, input, textarea {
 }
 
 /* **************************************************************** CONTAINER */
-.home__projects__title, .home__header__container, .home__about__container, .home__projects__body, .home__contact__container, .menu__container, .footer__contact, .footer__copy {
+.home__projects__title, .curriculo__container, .home__header__container, .home__about__container, .home__topic__container, .home__projects__body, .home__contact__container, .menu__container, .footer__contact, .footer__copy {
   width: 100%;
   padding-right: 2rem;
   padding-left: 2rem;
 }
 
 @media (min-width: 576px) {
-  .home__projects__title, .home__header__container, .home__about__container, .home__projects__body, .home__contact__container, .menu__container, .footer__contact, .footer__copy {
+  .home__projects__title, .curriculo__container, .home__header__container, .home__about__container, .home__topic__container, .home__projects__body, .home__contact__container, .menu__container, .footer__contact, .footer__copy {
     width: 540px;
     margin-right: auto;
     margin-left: auto;
@@ -102,7 +102,7 @@ button, select, input, textarea {
   }
 }
 @media (min-width: 768px) {
-  .home__header__container, .home__about__container, .home__projects__body, .home__contact__container, .menu__container, .footer__contact, .footer__copy {
+  .curriculo__container, .home__header__container, .home__about__container, .home__topic__container, .home__projects__body, .home__contact__container, .menu__container, .footer__contact, .footer__copy {
     width: 720px;
     margin-right: auto;
     margin-left: auto;
@@ -111,7 +111,7 @@ button, select, input, textarea {
   }
 }
 @media (min-width: 960px) {
-  .home__header__container, .home__about__container, .home__projects__body, .home__contact__container, .menu__container, .footer__contact, .footer__copy {
+  .home__header__container, .home__about__container, .home__topic__container, .home__projects__body, .home__contact__container, .menu__container, .footer__contact, .footer__copy {
     width: 920px;
     margin-right: auto;
     margin-left: auto;
@@ -120,7 +120,7 @@ button, select, input, textarea {
   }
 }
 @media (min-width: 1200px) {
-  .home__header__container, .home__about__container, .home__projects__body, .home__contact__container, .menu__container, .footer__contact, .footer__copy {
+  .home__header__container, .home__about__container, .home__topic__container, .home__projects__body, .home__contact__container, .menu__container, .footer__contact, .footer__copy {
     width: 1140px;
     margin-right: auto;
     margin-left: auto;
@@ -130,6 +130,10 @@ button, select, input, textarea {
 }
 /* **************************************************************** GRID */
 @media (min-width: 768px) {
+  .curriculo__graphics {
+    width: calc(100% / 12 * 4);
+  }
+
   .home__header__container div, .home__header__container img, .home__about__container > div, .home__about__container > img, .home__contact__text, .home__contact img {
     width: calc(100% / 12 * 6);
   }
@@ -137,6 +141,10 @@ button, select, input, textarea {
   .home__projects__medium {
     width: calc(100% / 12 * 6 - 1.5rem * 6 / 12);
     margin-right: calc(1.5rem);
+  }
+
+  .curriculo__info {
+    width: calc(100% / 12 * 8);
   }
 
   .home__projects__large {
@@ -187,9 +195,6 @@ button, select, input, textarea {
   font-weight: 700;
   font-size: 0.9em;
 }
-.menu a:hover {
-  color: var(--verde-escuro);
-}
 .menu__links {
   width: 100%;
   height: 100%;
@@ -203,6 +208,7 @@ button, select, input, textarea {
   background-color: var(--preto);
 }
 .menu__links li {
+  font-size: 2em;
   font-family: "Courier Prime", monospace;
   text-align: center;
   padding: 0.5rem 0;
@@ -309,7 +315,7 @@ button, select, input, textarea {
 }
 @media (min-width: 768px) {
   .home__header__container {
-    padding: 5rem 0 0 2.5rem;
+    padding: 5rem 0 0 0;
     flex-direction: row;
     align-items: center;
     text-align: left;
@@ -317,7 +323,7 @@ button, select, input, textarea {
 }
 @media (min-width: 960px) {
   .home__header__container {
-    padding: 5rem 0 0 4rem;
+    padding: 5rem 0 0 2.5rem;
   }
 }
 @media (min-width: 768px) {
@@ -375,7 +381,8 @@ button, select, input, textarea {
 }
 @media (min-width: 576px) {
   .home__about__container {
-    padding: 3rem 2.5rem;
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
   }
 }
 @media (min-width: 768px) {
@@ -387,7 +394,8 @@ button, select, input, textarea {
 }
 @media (min-width: 960px) {
   .home__about__container {
-    padding: 4rem;
+    padding-right: 4rem;
+    padding-left: 4rem;
   }
 }
 .home__about__container > div {
@@ -459,6 +467,43 @@ button, select, input, textarea {
 .home__about__container p a:hover {
   color: var(--verde-escuro);
   border-color: var(--verde-escuro);
+}
+
+.home__topic {
+  padding: 4rem 0 0 0;
+  text-align: center;
+}
+.home__topic__container {
+  border-bottom: 0.0625rem solid var(--preto-claro);
+  padding-bottom: 4rem;
+  flex-wrap: nowrap;
+}
+@media (min-width: 768px) {
+  .home__topic__container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+.home__topic__container > h2 {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.home__topic__container > p {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.home__topic__container > div {
+  width: 100%;
+  flex-wrap: nowrap;
+}
+@media (min-width: 768px) {
+  .home__topic__container > div {
+    width: calc(100% / 3);
+  }
+}
+.home__topic__container > div img {
+  padding: 2rem;
+  object-fit: fill;
 }
 
 .home__projects {
@@ -591,8 +636,7 @@ button, select, input, textarea {
   }
 }
 .home__contact__text h3 {
-  font-family: "Courier Prime", monospace;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 1rem;
 }
 @media (min-width: 960px) {
@@ -617,8 +661,206 @@ button, select, input, textarea {
   }
 }
 
+/* *********************************************************** CURRICULO */
+.curriculo {
+  padding: 2rem 0;
+}
+@media (min-width: 576px) {
+  .curriculo {
+    padding: 3rem 2rem 3rem 2rem;
+  }
+}
+.curriculo__container {
+  padding: 0;
+}
+@media (min-width: 576px) {
+  .curriculo__container {
+    border: 0.0625rem solid var(--branco-escuro);
+  }
+}
+@media (min-width: 768px) {
+  .curriculo__container {
+    flex-direction: row-reverse;
+  }
+}
+.curriculo__info {
+  flex-wrap: nowrap;
+  padding: 1.5rem;
+}
+.curriculo__graphics {
+  background-color: var(--verde-claro);
+  padding: 1.5rem;
+  justify-content: space-between;
+}
+.curriculo__graphics img {
+  margin-bottom: 1rem;
+}
+.curriculo__header img {
+  margin-bottom: 2rem;
+}
+.curriculo__header h3 {
+  font-family: "Courier Prime", monospace;
+  font-weight: 700;
+  line-height: 0.8em;
+  color: var(--verde-escuro);
+}
+@media (min-width: 768px) {
+  .curriculo__header h3 {
+    font-size: 2em;
+  }
+}
+.curriculo__header span {
+  font-family: "Courier Prime", monospace;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .curriculo__header span {
+    font-size: 1.1em;
+  }
+}
+.curriculo__academic, .curriculo__jobs {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+}
+.curriculo__academic h4, .curriculo__jobs h4 {
+  font-family: "Courier Prime", monospace;
+  font-weight: 700;
+  color: var(--verde-escuro);
+  margin-bottom: -0.75rem;
+}
+.curriculo__item {
+  margin-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 0.0625rem solid var(--preto-claro);
+  font-size: 0.8em;
+}
+@media (min-width: 576px) {
+  .curriculo__item {
+    font-size: 1em;
+  }
+}
+.curriculo__item:last-child {
+  border: none;
+  padding-bottom: 0;
+}
+.curriculo__item > div {
+  flex-direction: row;
+  margin: 0.1rem 0;
+}
+.curriculo__item > div span:first-child {
+  font-weight: 600;
+  width: 5rem;
+}
+@media (min-width: 576px) {
+  .curriculo__item > div span:first-child {
+    width: 6.5rem;
+  }
+}
+.curriculo__item > div span:last-child {
+  width: calc(100% - 5rem);
+}
+@media (min-width: 576px) {
+  .curriculo__item > div span:last-child {
+    width: calc(100% - 6.5rem);
+  }
+}
+.curriculo__skills h4 {
+  font-family: "Courier Prime", monospace;
+  font-weight: 700;
+}
+.curriculo__skills label {
+  font-size: 0.8em;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+.curriculo__contact {
+  font-size: 0.7em;
+  margin-top: 2rem;
+}
+.curriculo__contact span {
+  width: 100%;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+.curriculo__contact p {
+  width: 100%;
+}
+.curriculo__links {
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+.curriculo__links > a {
+  font-size: 0.8em;
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+
+meter {
+  height: 10px;
+  border-radius: 0;
+  background: var(--preto);
+  width: 100%;
+}
+meter:hover {
+  background: var(--preto);
+}
+meter::-webkit-meter-bar {
+  height: 10px;
+  background: var(--preto);
+  border-radius: 0;
+  border: none;
+}
+meter::-webkit-meter-bar:hover {
+  background: var(--preto);
+}
+meter::-webkit-meter-optimum-value {
+  background: var(--verde-escuro);
+  border-radius: 0;
+}
+meter::-webkit-meter-optimum-value:hover {
+  background: var(--verde-escuro);
+}
+meter:-moz-meter-optimum::-moz-meter-bar {
+  background: var(--verde-escuro);
+  border-radius: 0;
+}
+meter:-moz-meter-optimum::-moz-meter-bar:hover {
+  background: var(--verde-escuro);
+}
+meter::-webkit-meter-suboptimum-value {
+  background: #FFFF00;
+  border-radius: 0;
+}
+meter::-webkit-meter-suboptimum-value:hover {
+  background: #DDDD00;
+}
+meter:-moz-meter-sub-optimum::-moz-meter-bar {
+  background: #FFFF00;
+  border-radius: 0;
+}
+meter:-moz-meter-sub-optimum::-moz-meter-bar:hover {
+  background: #DDDD00;
+}
+meter::-webkit-meter-even-less-good-value {
+  background: #FF0000;
+  border-radius: 0;
+}
+meter::-webkit-meter-even-less-good-value:hover {
+  background: #BB0000;
+}
+meter:-moz-meter-sub-sub-optimum::-moz-meter-bar {
+  background: #FF0000;
+  border-radius: 0;
+}
+meter:-moz-meter-sub-sub-optimum::-moz-meter-bar:hover {
+  background: #BB0000;
+}
+
 html {
   --preto: rgb(39, 48, 63);
+  --preto-claro: rgb(159, 168, 183);
   --verde-escuro: rgb(50, 215, 180);
   --verde: rgb(135, 235, 200);
   --verde-claro: rgb(207, 247, 233);
@@ -657,11 +899,11 @@ h2 {
   }
 }
 
-h3 {
+h3, h4 {
   font-size: 1.3em;
 }
 @media (min-width: 576px) {
-  h3 {
+  h3, h4 {
     font-size: 1.5em;
   }
 }

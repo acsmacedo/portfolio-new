@@ -5,8 +5,8 @@
         <h1>
           <span>Boas-vindas!</span>
         </h1>
-        <p>Este é meu portfólio. Aqui você vai encontrar um pouco sobre mim e meu trabalho!</p>
-        <a href="">Vamos lá!</a>
+        <p>Este é meu portfólio. Aqui você vai encontrar um pouco sobre mim, meu trabalho e projetos!</p>
+        <a href="#about">Vamos lá!</a>
       </div>
       <img v-if="showImage" src="../../assets/illustrations/home-header.svg" alt="">
       <img v-else src="../../assets/illustrations/home-header-large.svg" alt="">

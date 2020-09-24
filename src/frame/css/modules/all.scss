@@ -26,9 +26,6 @@
     font-family: 'Courier Prime', monospace;
     font-weight: 700;
     font-size: 0.9em;
-    &:hover {
-      color: var(--verde-escuro);
-    }
   }
   &__links {
     width: 100%;
@@ -42,6 +39,7 @@
     padding: 2rem;
     background-color: var(--preto);
     li {
+      font-size: 2em;
       font-family: 'Courier Prime', monospace;
       text-align: center;
       padding: 0.5rem 0;
