@@ -149,7 +149,7 @@
           <span>Telefone:</span>
           <p>(11) 4171-1350 | (11) 97032-9784</p>
           <span>Portfólio:</span>
-          <p><a href="https://www.acsmacedo.netlify.app">www.acsmacedo.netlify.app</a></p>
+          <p><router-link to="/">www.acsmacedo.netlify.app</router-link></p>
         </div>
       </div>
     </div>

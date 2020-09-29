@@ -36,7 +36,7 @@
     }
     img {
       @include func-col(md-6, lg-7, xl-8);
-      max-width: 90%;
+      max-width: 100%;
       margin: 0 auto;
       @media (min-width: func-container(lg)) {
         max-height: 550px;
@@ -99,35 +99,17 @@
         padding-left: 2rem;
         align-items: flex-start;
       }
-      > div {
-        flex-direction: row;
-        align-items: flex-start;
-        a {
-          width: 40px;
-          height: 40px;
-          border: 0.0625rem solid var(--verde-escuro);
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          &:hover {
-            background-color: var(--branco);
-          }
-          &:first-child {
-            margin-right: 0.5rem;
-            @media (min-width: func-container(md)) {
-              margin-left: 0.9rem;
-            }
-          }
-        }
-        img {
-          width: 30px;
-          height: 30px;
+      > a {
+        @extend %btn;
+        font-size: 0.8em;
+        @media (min-width: func-container(md)) {
+          margin-left: 0.9rem;
         }
       }
     }
     > img{
       @include func-col(md-6);
-      max-width: 80%;
+      max-width: 90%;
       max-height: 600px;
       margin: 0 auto;
       object-fit: contain;
@@ -186,7 +168,7 @@
       }
       img{
         width: 70%;
-        margin: 1rem auto;
+        margin: 2.5rem auto 1rem auto;
         object-fit: fill;
       }
       p {
@@ -269,25 +251,16 @@
   &__links {
     align-items: center;
     margin-top: 2rem;
-    @media (min-width: func-container(sm)) {
-      flex-direction: row;
-      justify-content: center;
-    }
+    flex-direction: row;
+    justify-content: center;
     > a {
       display: flex;
       align-items: center;
+      padding: 0.25rem 1rem;
+      border-radius: 1000rem;
       cursor: pointer;
       &:hover {
-        > span {
-          border-color: var(--verde-escuro);
-        }
-      }
-      &:first-child {
-        margin-bottom: 0.5rem;
-        @media (min-width: func-container(sm)) {
-        margin-right: 1.5rem;
-        margin-bottom: 0;
-        }
+        background-color: var(--branco-claro);
       }
       > img {
         height: 1.5rem;

@@ -2,9 +2,7 @@
   <div id="app">
     <Menu />
     <MenuLinks />
-    <transition name="transition" mode="out-in">
-      <router-view />
-    </transition>
+    <router-view />
     <Footer />
   </div>
 </template>

@@ -24,22 +24,6 @@
       HomeDna,
       HomeProjects,
       HomeContact
-    },
-    mounted() {
-      const menu = document.querySelector('.menu');
-      const footer = document.querySelector('.footer');
-
-      menu.style.opacity = 1;
-      footer.style.opacity = 1;
-      
-      window.scrollTo(0, 0);
-    },
-    beforeDestroy() {
-      const menu = document.querySelector('.menu');
-      const footer = document.querySelector('.footer');
-
-      menu.style.opacity = 0;
-      footer.style.opacity = 0;
     }
   }
 </script>

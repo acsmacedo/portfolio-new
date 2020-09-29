@@ -56,7 +56,7 @@ button, select, input, textarea {
 }
 
 /* *********************************************************** ELEMENTS */
-.curriculo__links > a, .home__header__container a {
+.curriculo__links > a, .home__header__container a, .home__about__container > div > a {
   font-family: "Courier Prime", monospace;
   font-weight: 700;
   text-transform: lowercase;
@@ -345,7 +345,7 @@ button, select, input, textarea {
   }
 }
 .home__header__container img {
-  max-width: 90%;
+  max-width: 100%;
   margin: 0 auto;
 }
 @media (min-width: 960px) {
@@ -420,35 +420,16 @@ button, select, input, textarea {
     align-items: flex-start;
   }
 }
-.home__about__container > div > div {
-  flex-direction: row;
-  align-items: flex-start;
-}
-.home__about__container > div > div a {
-  width: 40px;
-  height: 40px;
-  border: 0.0625rem solid var(--verde-escuro);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.home__about__container > div > div a:hover {
-  background-color: var(--branco);
-}
-.home__about__container > div > div a:first-child {
-  margin-right: 0.5rem;
+.home__about__container > div > a {
+  font-size: 0.8em;
 }
 @media (min-width: 768px) {
-  .home__about__container > div > div a:first-child {
+  .home__about__container > div > a {
     margin-left: 0.9rem;
   }
 }
-.home__about__container > div > div img {
-  width: 30px;
-  height: 30px;
-}
 .home__about__container > img {
-  max-width: 80%;
+  max-width: 90%;
   max-height: 600px;
   margin: 0 auto;
   object-fit: contain;
@@ -512,7 +493,7 @@ button, select, input, textarea {
 }
 .home__dna__container > div img {
   width: 70%;
-  margin: 1rem auto;
+  margin: 2.5rem auto 1rem auto;
   object-fit: fill;
 }
 .home__dna__container > div p {
@@ -587,29 +568,18 @@ button, select, input, textarea {
 .home__projects__links {
   align-items: center;
   margin-top: 2rem;
-}
-@media (min-width: 576px) {
-  .home__projects__links {
-    flex-direction: row;
-    justify-content: center;
-  }
+  flex-direction: row;
+  justify-content: center;
 }
 .home__projects__links > a {
   display: flex;
   align-items: center;
+  padding: 0.25rem 1rem;
+  border-radius: 1000rem;
   cursor: pointer;
 }
-.home__projects__links > a:hover > span {
-  border-color: var(--verde-escuro);
-}
-.home__projects__links > a:first-child {
-  margin-bottom: 0.5rem;
-}
-@media (min-width: 576px) {
-  .home__projects__links > a:first-child {
-    margin-right: 1.5rem;
-    margin-bottom: 0;
-  }
+.home__projects__links > a:hover {
+  background-color: var(--branco-claro);
 }
 .home__projects__links > a > img {
   height: 1.5rem;
