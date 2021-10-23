@@ -781,6 +781,9 @@ button, select, input, textarea {
   font-weight: 600;
   margin-top: 0.75rem;
 }
+.curriculo__skills p {
+  font-size: 0.8em;
+}
 .curriculo__contact {
   margin-top: 2rem;
 }

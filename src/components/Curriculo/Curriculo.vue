@@ -5,9 +5,10 @@
         <div class="curriculo__header">
           <img src="../../assets/img/anderson-macedo.jpg" alt="Anderson Macedo" v-if="showImage">
           <h3>Anderson Macedo</h3>
-          <span>Desenvolvedor front-end</span>
-          <p>Desde o início da minha carreira atuei como designer gráfico, porém, neste novo ciclo da minha vida, busco ingressar na área de desenvolvimento front-end.</p>
-          <p>Comecei a buscar conhecimento nessa área no início de 2020 e, desde então, desenvolvi alguns projetos pessoais. Tenho facilidade e interesse em aprender novas tecnologias e linguagens.</p>
+          <span>Desenvolvedor Full Stack</span>
+          <p>Sou formado em design e atuei na área durante alguns anos da minha carreira, porém, desde o final de 2019 resolvi migrar para a área de desenvolvimento de software. Ingressei no curso de Ciência da Computação e atualmente trabalho como Desenvolvedor Full Stack.</p>
+          <p>Considero-me um profissional organizado, flexível e detalhista. Além disso, foco bastante no prazo e qualidade dos meus serviços, visando sempre a facilidade de manutenção e escalabilidade do projeto.</p>
+          <p>Além de buscar aperfeiçoar constantemente os conhecimentos adquiridos recentemente, tenho bastante interesse e facilidade em aprender novas ferramentas, tendo atuado em projetos com metodologias ágeis e tecnologias como .Net e React.</p>
         </div>
 
         <div class="curriculo__academic">
@@ -48,6 +49,25 @@
           <div class="curriculo__item">
             <div>
               <span>Instituiçao:</span>
+              <span>Intelitrader Tecnologia</span>
+            </div>
+            <div>
+              <span>Cargo:</span>
+              <span>Desenvolvedor Full Stack .Net</span>
+            </div>
+            <div>
+              <span>Período:</span>
+              <span>01/2021 - presente</span>
+            </div>
+            <div>
+              <span>Atividades:</span>
+              <span>Desenvolvimento de aplicações web para o mercado financeiro, implementando novas funcionalidades e correções de bugs. Back-end: .Net, Oracle, xUnit, Moq. Front-end: React, Typescript, Jest. CI/CD pipeline com Azure Devops.</span>
+            </div>
+          </div>
+
+          <div class="curriculo__item">
+            <div>
+              <span>Instituiçao:</span>
               <span>Piticas</span>
             </div>
             <div>
@@ -60,49 +80,7 @@
             </div>
             <div>
               <span>Atividades:</span>
-              <span>Criação de peças promocionais, artes para redes sociais e eventos, banners para site.</span>
-            </div>
-          </div>
-
-          <div class="curriculo__item">
-            <div>
-              <span>Instituiçao:</span>
-              <span>Imaginara Comunicação</span>
-            </div>
-            <div>
-              <span>Cargo:</span>
-              <span>Designer gráfico</span>
-            </div>
-            <div>
-              <span>Período:</span>
-              <span>04/2019 a 07/2019</span>
-            </div>
-            <div>
-              <span>Atividades:</span>
-              <span>Criação de banners, folhetos e materiais gráficos em geral. Criação de sites, landing page, redes sociais e peças digitais em geral.</span>
-            </div>
-          </div>
-     
-          <div class="curriculo__item">
-            <div>
-              <span>Instituiçao:</span>
-              <span>Indústria Gráfica Foroni</span>
-            </div>
-            <div>
-              <span>Cargo:</span>
-              <span>Designer gráfico</span>
-            </div>
-            <div>
-              <span>Período:</span>
-              <span>10/2015 a 10/2016 (estágio)</span>
-            </div>
-            <div>
-              <span></span>
-              <span>10/2016 a 10/2018</span>
-            </div>
-            <div>
-              <span>Atividades:</span>
-              <span>Diagramação de catálogos, criação de email MKT, materiais de PDV, desenvolvimento gráfico de produtos (cadernos, agendas e estojos).</span>
+              <span>Criação de banners, folhetos, PDV e materiais gráficos promocionais em geral. Artes digitais para redes sociais, banners de site e divulgação de eventos.</span>
             </div>
           </div>
         </div>
@@ -111,32 +89,14 @@
       <div class="curriculo__graphics">
         <div class="curriculo__lead">
           <img src="../../assets/img/anderson-macedo.jpg" alt="Anderson Macedo" v-if="!showImage">
-          <p>"Organizado. Flexível. Detalhista. É a partir desses atributos que me posiciono diante das minhas tarefas e deveres".</p>
           <div class="curriculo__skills">
             <h4>Habilidades</h4>
-            <label for="html">HTML</label>
-            <meter min="0" max="100" value="90" id="html"></meter>
-
-            <label for="css">CSS</label>
-            <meter min="0" max="100" value="90" id="css"></meter>
-
-            <label for="sass">Sass</label>
-            <meter min="0" max="100" value="90" id="sass"></meter>
-
-            <label for="bootstrap">Bootstrap</label>
-            <meter min="0" max="100" value="60" id="bootstrap"></meter>
-
-            <label for="javascript">Javascript</label>
-            <meter min="0" max="100" value="70" id="javascript"></meter>
-
-            <label for="jquery">JQuery</label>
-            <meter min="0" max="100" value="60" id="jquery"></meter>
-
-            <label for="vue">Vue</label>
-            <meter min="0" max="100" value="70" id="vue"></meter>
-            
-            <label for="git">Git / Github</label>
-            <meter min="0" max="100" value="90" id="git"></meter>
+            <label for="html">Front-end:</label>
+            <p>Desenvolvimento de interfaces e aplicações web, com: HTML, CSS, Sass, Javascript, React, Vue, Typescript, Jest.</p>
+            <label for="html">Back-end:</label>
+            <p>Desenvolvimento de api's e aplicações web, com: .Net / C#, testes unitários com xUnit e Moq. Banco de dados relacionais (Oracle e MySql).</p>
+            <label for="html">Ferramentas:</label>
+            <p>Git, Docker, CI/CD com Azure Pipeline.</p>
           </div>
         </div>
 

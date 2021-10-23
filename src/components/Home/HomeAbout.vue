@@ -6,7 +6,7 @@
           <span>Sobre</span>
           <span>mim</span>
         </h2>
-        <p>Olá, me chamo Anderson Macedo e sou desenvolvedor Front-end. Para conhecer mais sobre mim, acesse meu currículo.</p>
+        <p>Olá, me chamo Anderson Macedo e sou desenvolvedor Full Stack. Para conhecer mais sobre mim, acesse meu currículo.</p>
         <p>O que eu posso adiantar? Sou organizado, flexível e detalhista. Atualmente estudo Ciências da Computação, porém, já sou formado em Design e isso reflete-se bastante em meus projetos.</p>
         <router-link to="/curriculo">currículo</router-link>
       </div>
