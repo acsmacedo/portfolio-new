@@ -8,7 +8,7 @@
           <span>Desenvolvedor Full Stack</span>
           <p>Sou formado em design e atuei na área durante alguns anos da minha carreira, porém, desde o final de 2019 resolvi migrar para a área de desenvolvimento de software. Ingressei no curso de Ciência da Computação e atualmente trabalho como Desenvolvedor Full Stack.</p>
           <p>Considero-me um profissional organizado, flexível e detalhista. Além disso, foco bastante no prazo e qualidade dos meus serviços, visando sempre a facilidade de manutenção e escalabilidade do projeto.</p>
-          <p>Além de buscar aperfeiçoar constantemente os conhecimentos adquiridos recentemente, tenho bastante interesse e facilidade em aprender novas ferramentas, tendo atuado em projetos com metodologias ágeis e tecnologias como .Net e React.</p>
+          <p>Além de buscar aperfeiçoar constantemente os conhecimentos adquiridos recentemente, tenho bastante interesse e facilidade em aprender novas ferramentas, tendo atuado em projetos com metodologias ágeis e tecnologias como .Net e React, de modo que me empenho em propor sugestões, colaborar com a equipe e melhorar continuamente os processos de desenvolvimento.</p>
         </div>
 
         <div class="curriculo__academic">
@@ -90,7 +90,6 @@
         <div class="curriculo__lead">
           <img src="../../assets/img/anderson-macedo.jpg" alt="Anderson Macedo" v-if="!showImage">
           <div class="curriculo__skills">
-            <h4>Habilidades</h4>
             <label for="html">Front-end:</label>
             <p>Desenvolvimento de interfaces e aplicações web, com: HTML, CSS, Sass, Javascript, React, Vue, Typescript, Jest.</p>
             <label for="html">Back-end:</label>
